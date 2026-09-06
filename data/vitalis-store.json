@@ -1,0 +1,3559 @@
+{
+  "users": [
+    {
+      "id": "demo-user-rahul",
+      "name": "Rahul Sharma",
+      "email": "demo@vitalis.health",
+      "passwordHash": "demo123",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2026-08-23T18:17:10.300Z",
+      "updatedAt": "2026-09-06T18:17:10.300Z"
+    }
+  ],
+  "profiles": {
+    "demo-user-rahul": {
+      "userId": "demo-user-rahul",
+      "age": 28,
+      "gender": "male",
+      "heightCm": 175,
+      "weightKg": 82.4,
+      "targetWeightKg": 74,
+      "activityLevel": "moderately_active",
+      "exerciseFrequencyDays": 4,
+      "dailyStepsEstimate": 8500,
+      "goal": "lose_weight",
+      "dietaryPreference": "vegetarian",
+      "allergies": [
+        "peanuts"
+      ],
+      "foodsToAvoid": [
+        "mushrooms"
+      ],
+      "preferredCuisine": "indian",
+      "mealsPerDay": 4,
+      "breakfastTime": "08:30",
+      "lunchTime": "13:30",
+      "dinnerTime": "20:00",
+      "dailyBudget": "moderate",
+      "cookingPreference": "quick",
+      "availableEquipment": [
+        "stove",
+        "microwave",
+        "air_fryer",
+        "blender"
+      ],
+      "updatedAt": "2026-09-06T18:17:10.300Z"
+    }
+  },
+  "metrics": {
+    "demo-user-rahul": {
+      "userId": "demo-user-rahul",
+      "bmi": 26.9,
+      "bmiCategory": "overweight",
+      "bmiCategoryLabel": "Overweight",
+      "bmr": 1783,
+      "tdee": 2764,
+      "targetCalories": 2314,
+      "proteinG": 148,
+      "carbsG": 269,
+      "fatG": 72,
+      "waterMl": 3200,
+      "waterGlasses": 13,
+      "targetSteps": 10000,
+      "targetExerciseMinutes": 45,
+      "targetSleepHours": 8,
+      "dailyWellnessScore": 82,
+      "updatedAt": "2026-09-06T18:17:10.301Z"
+    }
+  },
+  "dailyLogs": {
+    "demo-user-rahul": [
+      {
+        "id": "log-demo-user-rahul-2026-09-06",
+        "userId": "demo-user-rahul",
+        "date": "2026-09-06",
+        "weightKg": 82.4,
+        "waterMl": 2500,
+        "steps": 8500,
+        "exerciseMinutes": 25,
+        "exerciseName": "Full Body Strength & Core",
+        "sleepHours": 7,
+        "mood": "great",
+        "energyLevel": 8,
+        "notes": "Great energy today! Enjoyed the spiced oats breakfast and stayed hydrated during afternoon meetings.",
+        "completedMealIds": [
+          "meal-d1-breakfast",
+          "meal-d1-mid_morning",
+          "meal-d1-lunch"
+        ],
+        "wellnessScore": 74,
+        "checkInCompleted": true,
+        "createdAt": "2026-09-06T18:17:10.302Z",
+        "updatedAt": "2026-09-06T18:17:10.392Z"
+      },
+      {
+        "id": "log-demo-user-rahul-2026-09-05",
+        "userId": "demo-user-rahul",
+        "date": "2026-09-05",
+        "weightKg": 82.6,
+        "waterMl": 2790,
+        "steps": 11189,
+        "exerciseMinutes": 20,
+        "exerciseName": "Brisk Outdoor Walk",
+        "sleepHours": 8,
+        "mood": "good",
+        "energyLevel": 8,
+        "completedMealIds": [
+          "meal-1",
+          "meal-2",
+          "meal-3",
+          "meal-4"
+        ],
+        "wellnessScore": 92,
+        "checkInCompleted": true,
+        "createdAt": "2026-09-05T18:17:10.303Z",
+        "updatedAt": "2026-09-05T18:17:10.303Z"
+      },
+      {
+        "id": "log-demo-user-rahul-2026-09-04",
+        "userId": "demo-user-rahul",
+        "date": "2026-09-04",
+        "weightKg": 82.8,
+        "waterMl": 2666,
+        "steps": 7593,
+        "exerciseMinutes": 35,
+        "exerciseName": "Full Body Strength & Core",
+        "sleepHours": 8.1,
+        "mood": "good",
+        "energyLevel": 8,
+        "completedMealIds": [
+          "meal-1",
+          "meal-2",
+          "meal-3",
+          "meal-4"
+        ],
+        "wellnessScore": 90,
+        "checkInCompleted": true,
+        "createdAt": "2026-09-04T18:17:10.303Z",
+        "updatedAt": "2026-09-04T18:17:10.303Z"
+      },
+      {
+        "id": "log-demo-user-rahul-2026-09-03",
+        "userId": "demo-user-rahul",
+        "date": "2026-09-03",
+        "weightKg": 82.8,
+        "waterMl": 3240,
+        "steps": 11106,
+        "exerciseMinutes": 20,
+        "exerciseName": "Brisk Outdoor Walk",
+        "sleepHours": 7.2,
+        "mood": "great",
+        "energyLevel": 8,
+        "completedMealIds": [
+          "meal-1",
+          "meal-2",
+          "meal-3",
+          "meal-4"
+        ],
+        "wellnessScore": 81,
+        "checkInCompleted": true,
+        "createdAt": "2026-09-03T18:17:10.303Z",
+        "updatedAt": "2026-09-03T18:17:10.303Z"
+      },
+      {
+        "id": "log-demo-user-rahul-2026-09-02",
+        "userId": "demo-user-rahul",
+        "date": "2026-09-02",
+        "weightKg": 82.8,
+        "waterMl": 2904,
+        "steps": 8174,
+        "exerciseMinutes": 35,
+        "exerciseName": "Full Body Strength & Core",
+        "sleepHours": 6.1,
+        "mood": "good",
+        "energyLevel": 8,
+        "completedMealIds": [
+          "meal-1",
+          "meal-2",
+          "meal-3",
+          "meal-4"
+        ],
+        "wellnessScore": 94,
+        "checkInCompleted": true,
+        "createdAt": "2026-09-02T18:17:10.303Z",
+        "updatedAt": "2026-09-02T18:17:10.303Z"
+      },
+      {
+        "id": "log-demo-user-rahul-2026-09-01",
+        "userId": "demo-user-rahul",
+        "date": "2026-09-01",
+        "weightKg": 82.9,
+        "waterMl": 2534,
+        "steps": 10940,
+        "exerciseMinutes": 20,
+        "exerciseName": "Brisk Outdoor Walk",
+        "sleepHours": 5.8,
+        "mood": "good",
+        "energyLevel": 8,
+        "completedMealIds": [
+          "meal-1",
+          "meal-2",
+          "meal-3",
+          "meal-4"
+        ],
+        "wellnessScore": 86,
+        "checkInCompleted": true,
+        "createdAt": "2026-09-01T18:17:10.303Z",
+        "updatedAt": "2026-09-01T18:17:10.303Z"
+      },
+      {
+        "id": "log-demo-user-rahul-2026-08-31",
+        "userId": "demo-user-rahul",
+        "date": "2026-08-31",
+        "weightKg": 83.1,
+        "waterMl": 3210,
+        "steps": 8731,
+        "exerciseMinutes": 35,
+        "exerciseName": "Full Body Strength & Core",
+        "sleepHours": 6.7,
+        "mood": "great",
+        "energyLevel": 8,
+        "completedMealIds": [
+          "meal-1",
+          "meal-2",
+          "meal-3",
+          "meal-4"
+        ],
+        "wellnessScore": 86,
+        "checkInCompleted": true,
+        "createdAt": "2026-08-31T18:17:10.303Z",
+        "updatedAt": "2026-08-31T18:17:10.303Z"
+      },
+      {
+        "id": "log-demo-user-rahul-2026-08-30",
+        "userId": "demo-user-rahul",
+        "date": "2026-08-30",
+        "weightKg": 83.4,
+        "waterMl": 3004,
+        "steps": 10695,
+        "exerciseMinutes": 20,
+        "exerciseName": "Brisk Outdoor Walk",
+        "sleepHours": 7.8,
+        "mood": "good",
+        "energyLevel": 8,
+        "completedMealIds": [
+          "meal-1",
+          "meal-2",
+          "meal-3",
+          "meal-4"
+        ],
+        "wellnessScore": 94,
+        "checkInCompleted": true,
+        "createdAt": "2026-08-30T18:17:10.303Z",
+        "updatedAt": "2026-08-30T18:17:10.303Z"
+      },
+      {
+        "id": "log-demo-user-rahul-2026-08-29",
+        "userId": "demo-user-rahul",
+        "date": "2026-08-29",
+        "weightKg": 83.6,
+        "waterMl": 2396,
+        "steps": 9254,
+        "exerciseMinutes": 35,
+        "exerciseName": "Full Body Strength & Core",
+        "sleepHours": 8.2,
+        "mood": "good",
+        "energyLevel": 8,
+        "completedMealIds": [
+          "meal-1",
+          "meal-2",
+          "meal-3",
+          "meal-4"
+        ],
+        "wellnessScore": 81,
+        "checkInCompleted": true,
+        "createdAt": "2026-08-29T18:17:10.303Z",
+        "updatedAt": "2026-08-29T18:17:10.303Z"
+      },
+      {
+        "id": "log-demo-user-rahul-2026-08-28",
+        "userId": "demo-user-rahul",
+        "date": "2026-08-28",
+        "weightKg": 83.6,
+        "waterMl": 3161,
+        "steps": 10376,
+        "exerciseMinutes": 20,
+        "exerciseName": "Brisk Outdoor Walk",
+        "sleepHours": 7.5,
+        "mood": "great",
+        "energyLevel": 8,
+        "completedMealIds": [
+          "meal-1",
+          "meal-2",
+          "meal-3",
+          "meal-4"
+        ],
+        "wellnessScore": 90,
+        "checkInCompleted": true,
+        "createdAt": "2026-08-28T18:17:10.303Z",
+        "updatedAt": "2026-08-28T18:17:10.303Z"
+      },
+      {
+        "id": "log-demo-user-rahul-2026-08-27",
+        "userId": "demo-user-rahul",
+        "date": "2026-08-27",
+        "weightKg": 83.6,
+        "waterMl": 3089,
+        "steps": 9731,
+        "exerciseMinutes": 35,
+        "exerciseName": "Full Body Strength & Core",
+        "sleepHours": 6.3,
+        "mood": "good",
+        "energyLevel": 8,
+        "completedMealIds": [
+          "meal-1",
+          "meal-2",
+          "meal-3",
+          "meal-4"
+        ],
+        "wellnessScore": 92,
+        "checkInCompleted": true,
+        "createdAt": "2026-08-27T18:17:10.303Z",
+        "updatedAt": "2026-08-27T18:17:10.303Z"
+      },
+      {
+        "id": "log-demo-user-rahul-2026-08-26",
+        "userId": "demo-user-rahul",
+        "date": "2026-08-26",
+        "weightKg": 83.7,
+        "waterMl": 2254,
+        "steps": 9989,
+        "exerciseMinutes": 20,
+        "exerciseName": "Brisk Outdoor Walk",
+        "sleepHours": 5.8,
+        "mood": "good",
+        "energyLevel": 8,
+        "completedMealIds": [
+          "meal-1",
+          "meal-2",
+          "meal-3",
+          "meal-4"
+        ],
+        "wellnessScore": 76,
+        "checkInCompleted": true,
+        "createdAt": "2026-08-26T18:17:10.303Z",
+        "updatedAt": "2026-08-26T18:17:10.303Z"
+      },
+      {
+        "id": "log-demo-user-rahul-2026-08-25",
+        "userId": "demo-user-rahul",
+        "date": "2026-08-25",
+        "weightKg": 83.9,
+        "waterMl": 3094,
+        "steps": 10154,
+        "exerciseMinutes": 35,
+        "exerciseName": "Full Body Strength & Core",
+        "sleepHours": 6.4,
+        "mood": "great",
+        "energyLevel": 8,
+        "completedMealIds": [
+          "meal-1",
+          "meal-2",
+          "meal-3",
+          "meal-4"
+        ],
+        "wellnessScore": 92,
+        "checkInCompleted": true,
+        "createdAt": "2026-08-25T18:17:10.303Z",
+        "updatedAt": "2026-08-25T18:17:10.303Z"
+      },
+      {
+        "id": "log-demo-user-rahul-2026-08-24",
+        "userId": "demo-user-rahul",
+        "date": "2026-08-24",
+        "weightKg": 84.1,
+        "waterMl": 3157,
+        "steps": 9543,
+        "exerciseMinutes": 20,
+        "exerciseName": "Brisk Outdoor Walk",
+        "sleepHours": 7.5,
+        "mood": "good",
+        "energyLevel": 8,
+        "completedMealIds": [
+          "meal-1",
+          "meal-2",
+          "meal-3",
+          "meal-4"
+        ],
+        "wellnessScore": 90,
+        "checkInCompleted": true,
+        "createdAt": "2026-08-24T18:17:10.303Z",
+        "updatedAt": "2026-08-24T18:17:10.303Z"
+      }
+    ]
+  },
+  "mealPlans": {
+    "demo-user-rahul": {
+      "id": "plan-1788718630302",
+      "userId": "demo-user-rahul",
+      "title": "Personalized vegetarian 7-Day Plan",
+      "durationDays": 7,
+      "startDate": "2026-09-06",
+      "days": [
+        {
+          "dayNumber": 1,
+          "dayLabel": "Day 1 — Monday",
+          "dailyCalories": 2296,
+          "dailyProtein": 119,
+          "dailyHydrationMl": 2800,
+          "exerciseSuggestion": "30-minute moderate zone 2 brisk walk + core mobility",
+          "meals": [
+            {
+              "id": "meal-d1-breakfast",
+              "mealType": "breakfast",
+              "name": "Moong Dal Cheela with Mint Chutney",
+              "calories": 360,
+              "protein": 15,
+              "carbs": 56,
+              "fat": 9,
+              "portionSize": "1 medium bowl (250g)",
+              "prepNotes": "Savory lentil crepes rich in plant protein, zero gluten.",
+              "ingredients": [
+                {
+                  "name": "Yellow Moong Dal",
+                  "amount": "70g",
+                  "category": "grains"
+                },
+                {
+                  "name": "Fresh Mint & Coriander",
+                  "amount": "30g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Olive Oil",
+                  "amount": "1 tsp",
+                  "category": "pantry"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "prev-meal-d1-breakfast",
+                  "name": "Spiced Masala Rolled Oats & Chia Bowl",
+                  "calories": 379,
+                  "protein": 16,
+                  "carbs": 56,
+                  "fat": 10,
+                  "description": "Cook rolled oats in water or almond milk with turmeric, cumin, and mild green chillies. Top with roasted chia seeds and chopped cilantro.",
+                  "ingredients": [
+                    {
+                      "name": "Rolled Oats",
+                      "amount": "60g",
+                      "category": "grains"
+                    },
+                    {
+                      "name": "Chia Seeds",
+                      "amount": "15g",
+                      "category": "pantry"
+                    },
+                    {
+                      "name": "Almond Milk",
+                      "amount": "150ml",
+                      "category": "dairy"
+                    },
+                    {
+                      "name": "Mixed Spices (Turmeric, Cumin)",
+                      "amount": "5g",
+                      "category": "pantry"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": true
+            },
+            {
+              "id": "meal-d1-mid_morning",
+              "mealType": "mid_morning",
+              "name": "Roasted Spiced Chickpeas & Green Tea",
+              "calories": 180,
+              "protein": 8,
+              "carbs": 26,
+              "fat": 4,
+              "portionSize": "1/2 cup (60g)",
+              "prepNotes": "Crispy air-fried or oven-roasted chickpeas dusted with chaat masala and smoked paprika. Accompanied by fresh brewed antioxidant green tea.",
+              "ingredients": [
+                {
+                  "name": "Kabuli Chickpeas",
+                  "amount": "60g dry weight",
+                  "category": "grains"
+                },
+                {
+                  "name": "Chaat Masala & Paprika",
+                  "amount": "3g",
+                  "category": "pantry"
+                },
+                {
+                  "name": "Green Tea Bag",
+                  "amount": "1 bag",
+                  "category": "pantry"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-mid_morning-generic",
+                  "name": "Quick Lentil & Steamed Veggies Plate",
+                  "calories": 180,
+                  "protein": 8,
+                  "carbs": 26,
+                  "fat": 4,
+                  "description": "Allergy-safe balanced alternative with matched macros.",
+                  "ingredients": [
+                    {
+                      "name": "Seasonal Mixed Vegetables",
+                      "amount": "120g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Whole Grain / Seed Base",
+                      "amount": "50g",
+                      "category": "grains"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": true
+            },
+            {
+              "id": "meal-d1-lunch",
+              "mealType": "lunch",
+              "name": "Grilled Paneer Tikka with Brown Basmati & Cucumber Raita",
+              "calories": 539,
+              "protein": 28,
+              "carbs": 58,
+              "fat": 20,
+              "portionSize": "1 plate (150g paneer + 1 cup rice)",
+              "prepNotes": "Marinate low-fat cottage cheese (paneer) in yogurt and spices. Grill with bell peppers and onions. Serve alongside nutty brown rice and cooling cucumber raita.",
+              "ingredients": [
+                {
+                  "name": "Paneer (Low-Fat Cottage Cheese)",
+                  "amount": "140g",
+                  "category": "dairy"
+                },
+                {
+                  "name": "Brown Basmati Rice",
+                  "amount": "70g uncooked",
+                  "category": "grains"
+                },
+                {
+                  "name": "Bell Peppers & Onions",
+                  "amount": "100g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Curd (Yogurt)",
+                  "amount": "80g",
+                  "category": "dairy"
+                },
+                {
+                  "name": "Cucumber",
+                  "amount": "50g",
+                  "category": "vegetables"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-lunch-0",
+                  "name": "Tofu & Edamame Brown Rice Bowl",
+                  "calories": 512,
+                  "protein": 27,
+                  "carbs": 58,
+                  "fat": 18,
+                  "description": "Marinated pan-seared organic tofu with steamed edamame and brown rice.",
+                  "ingredients": [
+                    {
+                      "name": "Extra Firm Tofu",
+                      "amount": "150g",
+                      "category": "protein"
+                    },
+                    {
+                      "name": "Shelled Edamame",
+                      "amount": "50g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Brown Rice",
+                      "amount": "70g uncooked",
+                      "category": "grains"
+                    }
+                  ]
+                },
+                {
+                  "id": "alt-lunch-1",
+                  "name": "Dal Makhani (Low Cream) with Missi Roti & Kachumber Salad",
+                  "calories": 512,
+                  "protein": 27,
+                  "carbs": 58,
+                  "fat": 18,
+                  "description": "Slow-cooked black lentils in tomato reduction with chickpea flatbread.",
+                  "ingredients": [
+                    {
+                      "name": "Black Urad Dal & Rajma",
+                      "amount": "70g",
+                      "category": "grains"
+                    },
+                    {
+                      "name": "Besan / Wheat Flour",
+                      "amount": "60g",
+                      "category": "grains"
+                    },
+                    {
+                      "name": "Cucumber & Tomatoes",
+                      "amount": "100g",
+                      "category": "vegetables"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": true
+            },
+            {
+              "id": "meal-d1-snack",
+              "mealType": "evening_snack",
+              "name": "Roasted Makhana (Fox Nuts) & Steamed Edamame",
+              "calories": 160,
+              "protein": 9,
+              "carbs": 22,
+              "fat": 3,
+              "portionSize": "1 small bowl (40g makhana + 50g edamame)",
+              "prepNotes": "Lightly roast crunchy makhana with a drop of cold-pressed ghee and pink Himalayan salt. Pair with warm steamed edamame pods.",
+              "ingredients": [
+                {
+                  "name": "Phool Makhana (Fox Nuts)",
+                  "amount": "35g",
+                  "category": "grains"
+                },
+                {
+                  "name": "Edamame Pods",
+                  "amount": "50g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Cold-Pressed Ghee",
+                  "amount": "1/2 tsp",
+                  "category": "dairy"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-snack-0",
+                  "name": "Hummus with Carrot & Cucumber Batons",
+                  "calories": 152,
+                  "protein": 9,
+                  "carbs": 22,
+                  "fat": 3,
+                  "description": "Silky chickpea hummus with crisp garden crudités. 100% dairy-free.",
+                  "ingredients": [
+                    {
+                      "name": "Chickpea Hummus",
+                      "amount": "50g",
+                      "category": "pantry"
+                    },
+                    {
+                      "name": "Carrot & Cucumber Sticks",
+                      "amount": "120g",
+                      "category": "vegetables"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d1-dinner",
+              "mealType": "dinner",
+              "name": "Yellow Dal Tadka with Steamed Rice & Sauteed Methi/Palak",
+              "calories": 479,
+              "protein": 22,
+              "carbs": 66,
+              "fat": 12,
+              "portionSize": "1 bowl dal + 1 cup rice + 1 cup greens",
+              "prepNotes": "Comforting toor & moong dal tempered with cumin, garlic, and tomatoes. Served with aromatic basmati rice and stir-fried garlic spinach.",
+              "ingredients": [
+                {
+                  "name": "Toor & Moong Dal",
+                  "amount": "70g dry",
+                  "category": "grains"
+                },
+                {
+                  "name": "Basmati Rice",
+                  "amount": "65g dry",
+                  "category": "grains"
+                },
+                {
+                  "name": "Fresh Spinach (Palak)",
+                  "amount": "150g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Tomatoes & Garlic",
+                  "amount": "50g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Mustard Oil or Olive Oil",
+                  "amount": "1 tsp",
+                  "category": "pantry"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-dinner-0",
+                  "name": "Lentil Vegetable Soup with Sourdough Bread",
+                  "calories": 455,
+                  "protein": 21,
+                  "carbs": 66,
+                  "fat": 11,
+                  "description": "Hearty European style brown lentil potage with rosemary.",
+                  "ingredients": [
+                    {
+                      "name": "Brown Lentils",
+                      "amount": "70g",
+                      "category": "grains"
+                    },
+                    {
+                      "name": "Carrots, Celery & Leeks",
+                      "amount": "120g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Sourdough Toast",
+                      "amount": "1 slice",
+                      "category": "grains"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d1-bedtime",
+              "mealType": "bedtime",
+              "name": "Wholesome Nourish Bowl (bedtime)",
+              "calories": 578,
+              "protein": 37,
+              "carbs": 45,
+              "fat": 12,
+              "portionSize": "1 plate",
+              "prepNotes": "Fresh whole food combination tailored to your dietary exclusions.",
+              "ingredients": [
+                {
+                  "name": "Steamed Seasonal Greens",
+                  "amount": "150g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Complex Carbohydrates (Rice/Millet)",
+                  "amount": "60g",
+                  "category": "grains"
+                },
+                {
+                  "name": "Clean Protein Source",
+                  "amount": "100g",
+                  "category": "protein"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-bedtime-generic",
+                  "name": "Quick Lentil & Steamed Veggies Plate",
+                  "calories": 578,
+                  "protein": 37,
+                  "carbs": 45,
+                  "fat": 12,
+                  "description": "Allergy-safe balanced alternative with matched macros.",
+                  "ingredients": [
+                    {
+                      "name": "Seasonal Mixed Vegetables",
+                      "amount": "120g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Whole Grain / Seed Base",
+                      "amount": "50g",
+                      "category": "grains"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "dayLabel": "Day 2 — Tuesday",
+          "dailyCalories": 2312,
+          "dailyProtein": 147,
+          "dailyHydrationMl": 2800,
+          "exerciseSuggestion": "Full-body bodyweight circuit (Squats, Push-ups, Glute bridges, Plank)",
+          "meals": [
+            {
+              "id": "meal-d2-breakfast",
+              "mealType": "breakfast",
+              "name": "Greek Yogurt Berry Crunch Parfait",
+              "calories": 372,
+              "protein": 27,
+              "carbs": 43,
+              "fat": 8,
+              "portionSize": "1 tall glass (280g)",
+              "prepNotes": "Layer unsweetened Greek yogurt with antioxidant-rich blueberries, sliced strawberries, a sprinkle of rolled oats, and pumpkin seeds.",
+              "ingredients": [
+                {
+                  "name": "Greek Yogurt (Unsweetened)",
+                  "amount": "200g",
+                  "category": "dairy"
+                },
+                {
+                  "name": "Blueberries & Strawberries",
+                  "amount": "80g",
+                  "category": "fruits"
+                },
+                {
+                  "name": "Pumpkin Seeds",
+                  "amount": "15g",
+                  "category": "pantry"
+                },
+                {
+                  "name": "Raw Honey",
+                  "amount": "1 tsp",
+                  "category": "pantry"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-breakfast-0",
+                  "name": "Coconut Yogurt with Chia & Berry Compote",
+                  "calories": 353,
+                  "protein": 26,
+                  "carbs": 43,
+                  "fat": 7,
+                  "description": "100% dairy-free plant probiotic yogurt layered with warm berry reduction.",
+                  "ingredients": [
+                    {
+                      "name": "Coconut Milk Yogurt",
+                      "amount": "200g",
+                      "category": "dairy"
+                    },
+                    {
+                      "name": "Mixed Berries",
+                      "amount": "80g",
+                      "category": "fruits"
+                    },
+                    {
+                      "name": "Chia Seeds",
+                      "amount": "15g",
+                      "category": "pantry"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d2-mid_morning",
+              "mealType": "mid_morning",
+              "name": "Whey or Pea Protein Shake with Coconut Water",
+              "calories": 196,
+              "protein": 25,
+              "carbs": 12,
+              "fat": 3,
+              "portionSize": "1 shaker (300ml)",
+              "prepNotes": "Shake 1 scoop clean protein powder with chilled natural coconut water and 1/2 banana for optimal electrolyte balance.",
+              "ingredients": [
+                {
+                  "name": "Protein Powder",
+                  "amount": "30g",
+                  "category": "protein"
+                },
+                {
+                  "name": "Fresh Coconut Water",
+                  "amount": "250ml",
+                  "category": "fruits"
+                },
+                {
+                  "name": "Banana",
+                  "amount": "1/2 fruit",
+                  "category": "fruits"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-mid_morning-0",
+                  "name": "Plant Pea Protein Shake (Dairy-Free)",
+                  "calories": 186,
+                  "protein": 24,
+                  "carbs": 12,
+                  "fat": 3,
+                  "description": "Hypoallergenic vegan isolate protein blended with water and cinnamon.",
+                  "ingredients": [
+                    {
+                      "name": "Pea Protein Isolate",
+                      "amount": "30g",
+                      "category": "protein"
+                    },
+                    {
+                      "name": "Almond or Oat Milk",
+                      "amount": "250ml",
+                      "category": "dairy"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d2-lunch",
+              "mealType": "lunch",
+              "name": "Mediterranean Chickpea & Lentil Buddha Bowl",
+              "calories": 506,
+              "protein": 23,
+              "carbs": 70,
+              "fat": 14,
+              "portionSize": "1 generous bowl (320g)",
+              "prepNotes": "Spiced chickpeas, French green lentils, kalamata olives, cherry tomatoes, and baby greens drizzled with tahini-lemon dressing.",
+              "ingredients": [
+                {
+                  "name": "Cooked Chickpeas",
+                  "amount": "120g",
+                  "category": "grains"
+                },
+                {
+                  "name": "Cooked Green Lentils",
+                  "amount": "80g",
+                  "category": "grains"
+                },
+                {
+                  "name": "Cherry Tomatoes & Cucumber",
+                  "amount": "100g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Tahini (Sesame Paste)",
+                  "amount": "15g",
+                  "category": "pantry"
+                },
+                {
+                  "name": "Fresh Lemon Juice",
+                  "amount": "1 tbsp",
+                  "category": "fruits"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-lunch-0",
+                  "name": "Kidney Bean (Rajma) Bowl with Steamed Brown Rice",
+                  "calories": 481,
+                  "protein": 22,
+                  "carbs": 70,
+                  "fat": 13,
+                  "description": "North Indian style aromatic kidney bean curry with steamed whole grains.",
+                  "ingredients": [
+                    {
+                      "name": "Red Kidney Beans (Rajma)",
+                      "amount": "120g",
+                      "category": "grains"
+                    },
+                    {
+                      "name": "Brown Rice",
+                      "amount": "70g",
+                      "category": "grains"
+                    },
+                    {
+                      "name": "Onion, Ginger & Tomato Gravy",
+                      "amount": "80g",
+                      "category": "vegetables"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d2-snack",
+              "mealType": "evening_snack",
+              "name": "Roasted Makhana (Fox Nuts) & Steamed Edamame",
+              "calories": 165,
+              "protein": 9,
+              "carbs": 23,
+              "fat": 3,
+              "portionSize": "1 small bowl (40g makhana + 50g edamame)",
+              "prepNotes": "Lightly roast crunchy makhana with a drop of cold-pressed ghee and pink Himalayan salt. Pair with warm steamed edamame pods.",
+              "ingredients": [
+                {
+                  "name": "Phool Makhana (Fox Nuts)",
+                  "amount": "35g",
+                  "category": "grains"
+                },
+                {
+                  "name": "Edamame Pods",
+                  "amount": "50g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Cold-Pressed Ghee",
+                  "amount": "1/2 tsp",
+                  "category": "dairy"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-snack-0",
+                  "name": "Hummus with Carrot & Cucumber Batons",
+                  "calories": 157,
+                  "protein": 9,
+                  "carbs": 23,
+                  "fat": 3,
+                  "description": "Silky chickpea hummus with crisp garden crudités. 100% dairy-free.",
+                  "ingredients": [
+                    {
+                      "name": "Chickpea Hummus",
+                      "amount": "50g",
+                      "category": "pantry"
+                    },
+                    {
+                      "name": "Carrot & Cucumber Sticks",
+                      "amount": "120g",
+                      "category": "vegetables"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d2-dinner",
+              "mealType": "dinner",
+              "name": "Stir-Fried Tofu with Asian Greens & Jasmine Rice",
+              "calories": 475,
+              "protein": 25,
+              "carbs": 60,
+              "fat": 14,
+              "portionSize": "1 generous wok bowl",
+              "prepNotes": "Crisp pan-browned tofu tossed with bok choy, snap peas, bell peppers in a ginger-tamari glaze. Served over steamed fragrant jasmine rice.",
+              "ingredients": [
+                {
+                  "name": "Organic Firm Tofu",
+                  "amount": "160g",
+                  "category": "protein"
+                },
+                {
+                  "name": "Bok Choy & Snap Peas",
+                  "amount": "150g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Jasmine Rice",
+                  "amount": "65g dry",
+                  "category": "grains"
+                },
+                {
+                  "name": "Sesame Oil & Tamari (Gluten-Free)",
+                  "amount": "1 tbsp",
+                  "category": "pantry"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-dinner-0",
+                  "name": "Paneer & Capsicum Bhurji with Multigrain Phulkas",
+                  "calories": 451,
+                  "protein": 24,
+                  "carbs": 60,
+                  "fat": 13,
+                  "description": "Spiced scrambled cottage cheese with soft whole wheat flatbreads.",
+                  "ingredients": [
+                    {
+                      "name": "Fresh Paneer",
+                      "amount": "130g",
+                      "category": "dairy"
+                    },
+                    {
+                      "name": "Green Bell Pepper & Onion",
+                      "amount": "100g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Whole Wheat Atta",
+                      "amount": "60g",
+                      "category": "grains"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d2-bedtime",
+              "mealType": "bedtime",
+              "name": "Wholesome Nourish Bowl (bedtime)",
+              "calories": 598,
+              "protein": 38,
+              "carbs": 47,
+              "fat": 12,
+              "portionSize": "1 plate",
+              "prepNotes": "Fresh whole food combination tailored to your dietary exclusions.",
+              "ingredients": [
+                {
+                  "name": "Steamed Seasonal Greens",
+                  "amount": "150g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Complex Carbohydrates (Rice/Millet)",
+                  "amount": "60g",
+                  "category": "grains"
+                },
+                {
+                  "name": "Clean Protein Source",
+                  "amount": "100g",
+                  "category": "protein"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-bedtime-generic",
+                  "name": "Quick Lentil & Steamed Veggies Plate",
+                  "calories": 598,
+                  "protein": 38,
+                  "carbs": 47,
+                  "fat": 12,
+                  "description": "Allergy-safe balanced alternative with matched macros.",
+                  "ingredients": [
+                    {
+                      "name": "Seasonal Mixed Vegetables",
+                      "amount": "120g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Whole Grain / Seed Base",
+                      "amount": "50g",
+                      "category": "grains"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "dayLabel": "Day 3 — Wednesday",
+          "dailyCalories": 2315,
+          "dailyProtein": 120,
+          "dailyHydrationMl": 2800,
+          "exerciseSuggestion": "45-minute strength & endurance session (Upper focus)",
+          "meals": [
+            {
+              "id": "meal-d3-breakfast",
+              "mealType": "breakfast",
+              "name": "Spiced Masala Rolled Oats & Chia Bowl",
+              "calories": 379,
+              "protein": 16,
+              "carbs": 56,
+              "fat": 10,
+              "portionSize": "1 medium bowl (250g)",
+              "prepNotes": "Cook rolled oats in water or almond milk with turmeric, cumin, and mild green chillies. Top with roasted chia seeds and chopped cilantro.",
+              "ingredients": [
+                {
+                  "name": "Rolled Oats",
+                  "amount": "60g",
+                  "category": "grains"
+                },
+                {
+                  "name": "Chia Seeds",
+                  "amount": "15g",
+                  "category": "pantry"
+                },
+                {
+                  "name": "Almond Milk",
+                  "amount": "150ml",
+                  "category": "dairy"
+                },
+                {
+                  "name": "Mixed Spices (Turmeric, Cumin)",
+                  "amount": "5g",
+                  "category": "pantry"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-breakfast-0",
+                  "name": "Moong Dal Cheela with Mint Chutney",
+                  "calories": 360,
+                  "protein": 15,
+                  "carbs": 56,
+                  "fat": 9,
+                  "description": "Savory lentil crepes rich in plant protein, zero gluten.",
+                  "ingredients": [
+                    {
+                      "name": "Yellow Moong Dal",
+                      "amount": "70g",
+                      "category": "grains"
+                    },
+                    {
+                      "name": "Fresh Mint & Coriander",
+                      "amount": "30g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Olive Oil",
+                      "amount": "1 tsp",
+                      "category": "pantry"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d3-mid_morning",
+              "mealType": "mid_morning",
+              "name": "Roasted Spiced Chickpeas & Green Tea",
+              "calories": 180,
+              "protein": 8,
+              "carbs": 26,
+              "fat": 4,
+              "portionSize": "1/2 cup (60g)",
+              "prepNotes": "Crispy air-fried or oven-roasted chickpeas dusted with chaat masala and smoked paprika. Accompanied by fresh brewed antioxidant green tea.",
+              "ingredients": [
+                {
+                  "name": "Kabuli Chickpeas",
+                  "amount": "60g dry weight",
+                  "category": "grains"
+                },
+                {
+                  "name": "Chaat Masala & Paprika",
+                  "amount": "3g",
+                  "category": "pantry"
+                },
+                {
+                  "name": "Green Tea Bag",
+                  "amount": "1 bag",
+                  "category": "pantry"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-mid_morning-generic",
+                  "name": "Quick Lentil & Steamed Veggies Plate",
+                  "calories": 180,
+                  "protein": 8,
+                  "carbs": 26,
+                  "fat": 4,
+                  "description": "Allergy-safe balanced alternative with matched macros.",
+                  "ingredients": [
+                    {
+                      "name": "Seasonal Mixed Vegetables",
+                      "amount": "120g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Whole Grain / Seed Base",
+                      "amount": "50g",
+                      "category": "grains"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d3-lunch",
+              "mealType": "lunch",
+              "name": "Grilled Paneer Tikka with Brown Basmati & Cucumber Raita",
+              "calories": 539,
+              "protein": 28,
+              "carbs": 58,
+              "fat": 20,
+              "portionSize": "1 plate (150g paneer + 1 cup rice)",
+              "prepNotes": "Marinate low-fat cottage cheese (paneer) in yogurt and spices. Grill with bell peppers and onions. Serve alongside nutty brown rice and cooling cucumber raita.",
+              "ingredients": [
+                {
+                  "name": "Paneer (Low-Fat Cottage Cheese)",
+                  "amount": "140g",
+                  "category": "dairy"
+                },
+                {
+                  "name": "Brown Basmati Rice",
+                  "amount": "70g uncooked",
+                  "category": "grains"
+                },
+                {
+                  "name": "Bell Peppers & Onions",
+                  "amount": "100g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Curd (Yogurt)",
+                  "amount": "80g",
+                  "category": "dairy"
+                },
+                {
+                  "name": "Cucumber",
+                  "amount": "50g",
+                  "category": "vegetables"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-lunch-0",
+                  "name": "Tofu & Edamame Brown Rice Bowl",
+                  "calories": 512,
+                  "protein": 27,
+                  "carbs": 58,
+                  "fat": 18,
+                  "description": "Marinated pan-seared organic tofu with steamed edamame and brown rice.",
+                  "ingredients": [
+                    {
+                      "name": "Extra Firm Tofu",
+                      "amount": "150g",
+                      "category": "protein"
+                    },
+                    {
+                      "name": "Shelled Edamame",
+                      "amount": "50g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Brown Rice",
+                      "amount": "70g uncooked",
+                      "category": "grains"
+                    }
+                  ]
+                },
+                {
+                  "id": "alt-lunch-1",
+                  "name": "Dal Makhani (Low Cream) with Missi Roti & Kachumber Salad",
+                  "calories": 512,
+                  "protein": 27,
+                  "carbs": 58,
+                  "fat": 18,
+                  "description": "Slow-cooked black lentils in tomato reduction with chickpea flatbread.",
+                  "ingredients": [
+                    {
+                      "name": "Black Urad Dal & Rajma",
+                      "amount": "70g",
+                      "category": "grains"
+                    },
+                    {
+                      "name": "Besan / Wheat Flour",
+                      "amount": "60g",
+                      "category": "grains"
+                    },
+                    {
+                      "name": "Cucumber & Tomatoes",
+                      "amount": "100g",
+                      "category": "vegetables"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d3-snack",
+              "mealType": "evening_snack",
+              "name": "Roasted Makhana (Fox Nuts) & Steamed Edamame",
+              "calories": 160,
+              "protein": 9,
+              "carbs": 22,
+              "fat": 3,
+              "portionSize": "1 small bowl (40g makhana + 50g edamame)",
+              "prepNotes": "Lightly roast crunchy makhana with a drop of cold-pressed ghee and pink Himalayan salt. Pair with warm steamed edamame pods.",
+              "ingredients": [
+                {
+                  "name": "Phool Makhana (Fox Nuts)",
+                  "amount": "35g",
+                  "category": "grains"
+                },
+                {
+                  "name": "Edamame Pods",
+                  "amount": "50g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Cold-Pressed Ghee",
+                  "amount": "1/2 tsp",
+                  "category": "dairy"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-snack-0",
+                  "name": "Hummus with Carrot & Cucumber Batons",
+                  "calories": 152,
+                  "protein": 9,
+                  "carbs": 22,
+                  "fat": 3,
+                  "description": "Silky chickpea hummus with crisp garden crudités. 100% dairy-free.",
+                  "ingredients": [
+                    {
+                      "name": "Chickpea Hummus",
+                      "amount": "50g",
+                      "category": "pantry"
+                    },
+                    {
+                      "name": "Carrot & Cucumber Sticks",
+                      "amount": "120g",
+                      "category": "vegetables"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d3-dinner",
+              "mealType": "dinner",
+              "name": "Yellow Dal Tadka with Steamed Rice & Sauteed Methi/Palak",
+              "calories": 479,
+              "protein": 22,
+              "carbs": 66,
+              "fat": 12,
+              "portionSize": "1 bowl dal + 1 cup rice + 1 cup greens",
+              "prepNotes": "Comforting toor & moong dal tempered with cumin, garlic, and tomatoes. Served with aromatic basmati rice and stir-fried garlic spinach.",
+              "ingredients": [
+                {
+                  "name": "Toor & Moong Dal",
+                  "amount": "70g dry",
+                  "category": "grains"
+                },
+                {
+                  "name": "Basmati Rice",
+                  "amount": "65g dry",
+                  "category": "grains"
+                },
+                {
+                  "name": "Fresh Spinach (Palak)",
+                  "amount": "150g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Tomatoes & Garlic",
+                  "amount": "50g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Mustard Oil or Olive Oil",
+                  "amount": "1 tsp",
+                  "category": "pantry"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-dinner-0",
+                  "name": "Lentil Vegetable Soup with Sourdough Bread",
+                  "calories": 455,
+                  "protein": 21,
+                  "carbs": 66,
+                  "fat": 11,
+                  "description": "Hearty European style brown lentil potage with rosemary.",
+                  "ingredients": [
+                    {
+                      "name": "Brown Lentils",
+                      "amount": "70g",
+                      "category": "grains"
+                    },
+                    {
+                      "name": "Carrots, Celery & Leeks",
+                      "amount": "120g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Sourdough Toast",
+                      "amount": "1 slice",
+                      "category": "grains"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d3-bedtime",
+              "mealType": "bedtime",
+              "name": "Wholesome Nourish Bowl (bedtime)",
+              "calories": 578,
+              "protein": 37,
+              "carbs": 45,
+              "fat": 12,
+              "portionSize": "1 plate",
+              "prepNotes": "Fresh whole food combination tailored to your dietary exclusions.",
+              "ingredients": [
+                {
+                  "name": "Steamed Seasonal Greens",
+                  "amount": "150g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Complex Carbohydrates (Rice/Millet)",
+                  "amount": "60g",
+                  "category": "grains"
+                },
+                {
+                  "name": "Clean Protein Source",
+                  "amount": "100g",
+                  "category": "protein"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-bedtime-generic",
+                  "name": "Quick Lentil & Steamed Veggies Plate",
+                  "calories": 578,
+                  "protein": 37,
+                  "carbs": 45,
+                  "fat": 12,
+                  "description": "Allergy-safe balanced alternative with matched macros.",
+                  "ingredients": [
+                    {
+                      "name": "Seasonal Mixed Vegetables",
+                      "amount": "120g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Whole Grain / Seed Base",
+                      "amount": "50g",
+                      "category": "grains"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            }
+          ]
+        },
+        {
+          "dayNumber": 4,
+          "dayLabel": "Day 4 — Thursday",
+          "dailyCalories": 2312,
+          "dailyProtein": 147,
+          "dailyHydrationMl": 2800,
+          "exerciseSuggestion": "Active recovery day: 20-min gentle yoga & hydration focus",
+          "meals": [
+            {
+              "id": "meal-d4-breakfast",
+              "mealType": "breakfast",
+              "name": "Greek Yogurt Berry Crunch Parfait",
+              "calories": 372,
+              "protein": 27,
+              "carbs": 43,
+              "fat": 8,
+              "portionSize": "1 tall glass (280g)",
+              "prepNotes": "Layer unsweetened Greek yogurt with antioxidant-rich blueberries, sliced strawberries, a sprinkle of rolled oats, and pumpkin seeds.",
+              "ingredients": [
+                {
+                  "name": "Greek Yogurt (Unsweetened)",
+                  "amount": "200g",
+                  "category": "dairy"
+                },
+                {
+                  "name": "Blueberries & Strawberries",
+                  "amount": "80g",
+                  "category": "fruits"
+                },
+                {
+                  "name": "Pumpkin Seeds",
+                  "amount": "15g",
+                  "category": "pantry"
+                },
+                {
+                  "name": "Raw Honey",
+                  "amount": "1 tsp",
+                  "category": "pantry"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-breakfast-0",
+                  "name": "Coconut Yogurt with Chia & Berry Compote",
+                  "calories": 353,
+                  "protein": 26,
+                  "carbs": 43,
+                  "fat": 7,
+                  "description": "100% dairy-free plant probiotic yogurt layered with warm berry reduction.",
+                  "ingredients": [
+                    {
+                      "name": "Coconut Milk Yogurt",
+                      "amount": "200g",
+                      "category": "dairy"
+                    },
+                    {
+                      "name": "Mixed Berries",
+                      "amount": "80g",
+                      "category": "fruits"
+                    },
+                    {
+                      "name": "Chia Seeds",
+                      "amount": "15g",
+                      "category": "pantry"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d4-mid_morning",
+              "mealType": "mid_morning",
+              "name": "Whey or Pea Protein Shake with Coconut Water",
+              "calories": 196,
+              "protein": 25,
+              "carbs": 12,
+              "fat": 3,
+              "portionSize": "1 shaker (300ml)",
+              "prepNotes": "Shake 1 scoop clean protein powder with chilled natural coconut water and 1/2 banana for optimal electrolyte balance.",
+              "ingredients": [
+                {
+                  "name": "Protein Powder",
+                  "amount": "30g",
+                  "category": "protein"
+                },
+                {
+                  "name": "Fresh Coconut Water",
+                  "amount": "250ml",
+                  "category": "fruits"
+                },
+                {
+                  "name": "Banana",
+                  "amount": "1/2 fruit",
+                  "category": "fruits"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-mid_morning-0",
+                  "name": "Plant Pea Protein Shake (Dairy-Free)",
+                  "calories": 186,
+                  "protein": 24,
+                  "carbs": 12,
+                  "fat": 3,
+                  "description": "Hypoallergenic vegan isolate protein blended with water and cinnamon.",
+                  "ingredients": [
+                    {
+                      "name": "Pea Protein Isolate",
+                      "amount": "30g",
+                      "category": "protein"
+                    },
+                    {
+                      "name": "Almond or Oat Milk",
+                      "amount": "250ml",
+                      "category": "dairy"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d4-lunch",
+              "mealType": "lunch",
+              "name": "Mediterranean Chickpea & Lentil Buddha Bowl",
+              "calories": 506,
+              "protein": 23,
+              "carbs": 70,
+              "fat": 14,
+              "portionSize": "1 generous bowl (320g)",
+              "prepNotes": "Spiced chickpeas, French green lentils, kalamata olives, cherry tomatoes, and baby greens drizzled with tahini-lemon dressing.",
+              "ingredients": [
+                {
+                  "name": "Cooked Chickpeas",
+                  "amount": "120g",
+                  "category": "grains"
+                },
+                {
+                  "name": "Cooked Green Lentils",
+                  "amount": "80g",
+                  "category": "grains"
+                },
+                {
+                  "name": "Cherry Tomatoes & Cucumber",
+                  "amount": "100g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Tahini (Sesame Paste)",
+                  "amount": "15g",
+                  "category": "pantry"
+                },
+                {
+                  "name": "Fresh Lemon Juice",
+                  "amount": "1 tbsp",
+                  "category": "fruits"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-lunch-0",
+                  "name": "Kidney Bean (Rajma) Bowl with Steamed Brown Rice",
+                  "calories": 481,
+                  "protein": 22,
+                  "carbs": 70,
+                  "fat": 13,
+                  "description": "North Indian style aromatic kidney bean curry with steamed whole grains.",
+                  "ingredients": [
+                    {
+                      "name": "Red Kidney Beans (Rajma)",
+                      "amount": "120g",
+                      "category": "grains"
+                    },
+                    {
+                      "name": "Brown Rice",
+                      "amount": "70g",
+                      "category": "grains"
+                    },
+                    {
+                      "name": "Onion, Ginger & Tomato Gravy",
+                      "amount": "80g",
+                      "category": "vegetables"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d4-snack",
+              "mealType": "evening_snack",
+              "name": "Roasted Makhana (Fox Nuts) & Steamed Edamame",
+              "calories": 165,
+              "protein": 9,
+              "carbs": 23,
+              "fat": 3,
+              "portionSize": "1 small bowl (40g makhana + 50g edamame)",
+              "prepNotes": "Lightly roast crunchy makhana with a drop of cold-pressed ghee and pink Himalayan salt. Pair with warm steamed edamame pods.",
+              "ingredients": [
+                {
+                  "name": "Phool Makhana (Fox Nuts)",
+                  "amount": "35g",
+                  "category": "grains"
+                },
+                {
+                  "name": "Edamame Pods",
+                  "amount": "50g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Cold-Pressed Ghee",
+                  "amount": "1/2 tsp",
+                  "category": "dairy"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-snack-0",
+                  "name": "Hummus with Carrot & Cucumber Batons",
+                  "calories": 157,
+                  "protein": 9,
+                  "carbs": 23,
+                  "fat": 3,
+                  "description": "Silky chickpea hummus with crisp garden crudités. 100% dairy-free.",
+                  "ingredients": [
+                    {
+                      "name": "Chickpea Hummus",
+                      "amount": "50g",
+                      "category": "pantry"
+                    },
+                    {
+                      "name": "Carrot & Cucumber Sticks",
+                      "amount": "120g",
+                      "category": "vegetables"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d4-dinner",
+              "mealType": "dinner",
+              "name": "Stir-Fried Tofu with Asian Greens & Jasmine Rice",
+              "calories": 475,
+              "protein": 25,
+              "carbs": 60,
+              "fat": 14,
+              "portionSize": "1 generous wok bowl",
+              "prepNotes": "Crisp pan-browned tofu tossed with bok choy, snap peas, bell peppers in a ginger-tamari glaze. Served over steamed fragrant jasmine rice.",
+              "ingredients": [
+                {
+                  "name": "Organic Firm Tofu",
+                  "amount": "160g",
+                  "category": "protein"
+                },
+                {
+                  "name": "Bok Choy & Snap Peas",
+                  "amount": "150g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Jasmine Rice",
+                  "amount": "65g dry",
+                  "category": "grains"
+                },
+                {
+                  "name": "Sesame Oil & Tamari (Gluten-Free)",
+                  "amount": "1 tbsp",
+                  "category": "pantry"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-dinner-0",
+                  "name": "Paneer & Capsicum Bhurji with Multigrain Phulkas",
+                  "calories": 451,
+                  "protein": 24,
+                  "carbs": 60,
+                  "fat": 13,
+                  "description": "Spiced scrambled cottage cheese with soft whole wheat flatbreads.",
+                  "ingredients": [
+                    {
+                      "name": "Fresh Paneer",
+                      "amount": "130g",
+                      "category": "dairy"
+                    },
+                    {
+                      "name": "Green Bell Pepper & Onion",
+                      "amount": "100g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Whole Wheat Atta",
+                      "amount": "60g",
+                      "category": "grains"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d4-bedtime",
+              "mealType": "bedtime",
+              "name": "Wholesome Nourish Bowl (bedtime)",
+              "calories": 598,
+              "protein": 38,
+              "carbs": 47,
+              "fat": 12,
+              "portionSize": "1 plate",
+              "prepNotes": "Fresh whole food combination tailored to your dietary exclusions.",
+              "ingredients": [
+                {
+                  "name": "Steamed Seasonal Greens",
+                  "amount": "150g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Complex Carbohydrates (Rice/Millet)",
+                  "amount": "60g",
+                  "category": "grains"
+                },
+                {
+                  "name": "Clean Protein Source",
+                  "amount": "100g",
+                  "category": "protein"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-bedtime-generic",
+                  "name": "Quick Lentil & Steamed Veggies Plate",
+                  "calories": 598,
+                  "protein": 38,
+                  "carbs": 47,
+                  "fat": 12,
+                  "description": "Allergy-safe balanced alternative with matched macros.",
+                  "ingredients": [
+                    {
+                      "name": "Seasonal Mixed Vegetables",
+                      "amount": "120g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Whole Grain / Seed Base",
+                      "amount": "50g",
+                      "category": "grains"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            }
+          ]
+        },
+        {
+          "dayNumber": 5,
+          "dayLabel": "Day 5 — Friday",
+          "dailyCalories": 2315,
+          "dailyProtein": 120,
+          "dailyHydrationMl": 2800,
+          "exerciseSuggestion": "Lower body strength & 15-min incline walking",
+          "meals": [
+            {
+              "id": "meal-d5-breakfast",
+              "mealType": "breakfast",
+              "name": "Spiced Masala Rolled Oats & Chia Bowl",
+              "calories": 379,
+              "protein": 16,
+              "carbs": 56,
+              "fat": 10,
+              "portionSize": "1 medium bowl (250g)",
+              "prepNotes": "Cook rolled oats in water or almond milk with turmeric, cumin, and mild green chillies. Top with roasted chia seeds and chopped cilantro.",
+              "ingredients": [
+                {
+                  "name": "Rolled Oats",
+                  "amount": "60g",
+                  "category": "grains"
+                },
+                {
+                  "name": "Chia Seeds",
+                  "amount": "15g",
+                  "category": "pantry"
+                },
+                {
+                  "name": "Almond Milk",
+                  "amount": "150ml",
+                  "category": "dairy"
+                },
+                {
+                  "name": "Mixed Spices (Turmeric, Cumin)",
+                  "amount": "5g",
+                  "category": "pantry"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-breakfast-0",
+                  "name": "Moong Dal Cheela with Mint Chutney",
+                  "calories": 360,
+                  "protein": 15,
+                  "carbs": 56,
+                  "fat": 9,
+                  "description": "Savory lentil crepes rich in plant protein, zero gluten.",
+                  "ingredients": [
+                    {
+                      "name": "Yellow Moong Dal",
+                      "amount": "70g",
+                      "category": "grains"
+                    },
+                    {
+                      "name": "Fresh Mint & Coriander",
+                      "amount": "30g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Olive Oil",
+                      "amount": "1 tsp",
+                      "category": "pantry"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d5-mid_morning",
+              "mealType": "mid_morning",
+              "name": "Roasted Spiced Chickpeas & Green Tea",
+              "calories": 180,
+              "protein": 8,
+              "carbs": 26,
+              "fat": 4,
+              "portionSize": "1/2 cup (60g)",
+              "prepNotes": "Crispy air-fried or oven-roasted chickpeas dusted with chaat masala and smoked paprika. Accompanied by fresh brewed antioxidant green tea.",
+              "ingredients": [
+                {
+                  "name": "Kabuli Chickpeas",
+                  "amount": "60g dry weight",
+                  "category": "grains"
+                },
+                {
+                  "name": "Chaat Masala & Paprika",
+                  "amount": "3g",
+                  "category": "pantry"
+                },
+                {
+                  "name": "Green Tea Bag",
+                  "amount": "1 bag",
+                  "category": "pantry"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-mid_morning-generic",
+                  "name": "Quick Lentil & Steamed Veggies Plate",
+                  "calories": 180,
+                  "protein": 8,
+                  "carbs": 26,
+                  "fat": 4,
+                  "description": "Allergy-safe balanced alternative with matched macros.",
+                  "ingredients": [
+                    {
+                      "name": "Seasonal Mixed Vegetables",
+                      "amount": "120g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Whole Grain / Seed Base",
+                      "amount": "50g",
+                      "category": "grains"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d5-lunch",
+              "mealType": "lunch",
+              "name": "Grilled Paneer Tikka with Brown Basmati & Cucumber Raita",
+              "calories": 539,
+              "protein": 28,
+              "carbs": 58,
+              "fat": 20,
+              "portionSize": "1 plate (150g paneer + 1 cup rice)",
+              "prepNotes": "Marinate low-fat cottage cheese (paneer) in yogurt and spices. Grill with bell peppers and onions. Serve alongside nutty brown rice and cooling cucumber raita.",
+              "ingredients": [
+                {
+                  "name": "Paneer (Low-Fat Cottage Cheese)",
+                  "amount": "140g",
+                  "category": "dairy"
+                },
+                {
+                  "name": "Brown Basmati Rice",
+                  "amount": "70g uncooked",
+                  "category": "grains"
+                },
+                {
+                  "name": "Bell Peppers & Onions",
+                  "amount": "100g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Curd (Yogurt)",
+                  "amount": "80g",
+                  "category": "dairy"
+                },
+                {
+                  "name": "Cucumber",
+                  "amount": "50g",
+                  "category": "vegetables"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-lunch-0",
+                  "name": "Tofu & Edamame Brown Rice Bowl",
+                  "calories": 512,
+                  "protein": 27,
+                  "carbs": 58,
+                  "fat": 18,
+                  "description": "Marinated pan-seared organic tofu with steamed edamame and brown rice.",
+                  "ingredients": [
+                    {
+                      "name": "Extra Firm Tofu",
+                      "amount": "150g",
+                      "category": "protein"
+                    },
+                    {
+                      "name": "Shelled Edamame",
+                      "amount": "50g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Brown Rice",
+                      "amount": "70g uncooked",
+                      "category": "grains"
+                    }
+                  ]
+                },
+                {
+                  "id": "alt-lunch-1",
+                  "name": "Dal Makhani (Low Cream) with Missi Roti & Kachumber Salad",
+                  "calories": 512,
+                  "protein": 27,
+                  "carbs": 58,
+                  "fat": 18,
+                  "description": "Slow-cooked black lentils in tomato reduction with chickpea flatbread.",
+                  "ingredients": [
+                    {
+                      "name": "Black Urad Dal & Rajma",
+                      "amount": "70g",
+                      "category": "grains"
+                    },
+                    {
+                      "name": "Besan / Wheat Flour",
+                      "amount": "60g",
+                      "category": "grains"
+                    },
+                    {
+                      "name": "Cucumber & Tomatoes",
+                      "amount": "100g",
+                      "category": "vegetables"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d5-snack",
+              "mealType": "evening_snack",
+              "name": "Roasted Makhana (Fox Nuts) & Steamed Edamame",
+              "calories": 160,
+              "protein": 9,
+              "carbs": 22,
+              "fat": 3,
+              "portionSize": "1 small bowl (40g makhana + 50g edamame)",
+              "prepNotes": "Lightly roast crunchy makhana with a drop of cold-pressed ghee and pink Himalayan salt. Pair with warm steamed edamame pods.",
+              "ingredients": [
+                {
+                  "name": "Phool Makhana (Fox Nuts)",
+                  "amount": "35g",
+                  "category": "grains"
+                },
+                {
+                  "name": "Edamame Pods",
+                  "amount": "50g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Cold-Pressed Ghee",
+                  "amount": "1/2 tsp",
+                  "category": "dairy"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-snack-0",
+                  "name": "Hummus with Carrot & Cucumber Batons",
+                  "calories": 152,
+                  "protein": 9,
+                  "carbs": 22,
+                  "fat": 3,
+                  "description": "Silky chickpea hummus with crisp garden crudités. 100% dairy-free.",
+                  "ingredients": [
+                    {
+                      "name": "Chickpea Hummus",
+                      "amount": "50g",
+                      "category": "pantry"
+                    },
+                    {
+                      "name": "Carrot & Cucumber Sticks",
+                      "amount": "120g",
+                      "category": "vegetables"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d5-dinner",
+              "mealType": "dinner",
+              "name": "Yellow Dal Tadka with Steamed Rice & Sauteed Methi/Palak",
+              "calories": 479,
+              "protein": 22,
+              "carbs": 66,
+              "fat": 12,
+              "portionSize": "1 bowl dal + 1 cup rice + 1 cup greens",
+              "prepNotes": "Comforting toor & moong dal tempered with cumin, garlic, and tomatoes. Served with aromatic basmati rice and stir-fried garlic spinach.",
+              "ingredients": [
+                {
+                  "name": "Toor & Moong Dal",
+                  "amount": "70g dry",
+                  "category": "grains"
+                },
+                {
+                  "name": "Basmati Rice",
+                  "amount": "65g dry",
+                  "category": "grains"
+                },
+                {
+                  "name": "Fresh Spinach (Palak)",
+                  "amount": "150g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Tomatoes & Garlic",
+                  "amount": "50g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Mustard Oil or Olive Oil",
+                  "amount": "1 tsp",
+                  "category": "pantry"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-dinner-0",
+                  "name": "Lentil Vegetable Soup with Sourdough Bread",
+                  "calories": 455,
+                  "protein": 21,
+                  "carbs": 66,
+                  "fat": 11,
+                  "description": "Hearty European style brown lentil potage with rosemary.",
+                  "ingredients": [
+                    {
+                      "name": "Brown Lentils",
+                      "amount": "70g",
+                      "category": "grains"
+                    },
+                    {
+                      "name": "Carrots, Celery & Leeks",
+                      "amount": "120g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Sourdough Toast",
+                      "amount": "1 slice",
+                      "category": "grains"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d5-bedtime",
+              "mealType": "bedtime",
+              "name": "Wholesome Nourish Bowl (bedtime)",
+              "calories": 578,
+              "protein": 37,
+              "carbs": 45,
+              "fat": 12,
+              "portionSize": "1 plate",
+              "prepNotes": "Fresh whole food combination tailored to your dietary exclusions.",
+              "ingredients": [
+                {
+                  "name": "Steamed Seasonal Greens",
+                  "amount": "150g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Complex Carbohydrates (Rice/Millet)",
+                  "amount": "60g",
+                  "category": "grains"
+                },
+                {
+                  "name": "Clean Protein Source",
+                  "amount": "100g",
+                  "category": "protein"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-bedtime-generic",
+                  "name": "Quick Lentil & Steamed Veggies Plate",
+                  "calories": 578,
+                  "protein": 37,
+                  "carbs": 45,
+                  "fat": 12,
+                  "description": "Allergy-safe balanced alternative with matched macros.",
+                  "ingredients": [
+                    {
+                      "name": "Seasonal Mixed Vegetables",
+                      "amount": "120g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Whole Grain / Seed Base",
+                      "amount": "50g",
+                      "category": "grains"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            }
+          ]
+        },
+        {
+          "dayNumber": 6,
+          "dayLabel": "Day 6 — Saturday",
+          "dailyCalories": 2312,
+          "dailyProtein": 147,
+          "dailyHydrationMl": 2800,
+          "exerciseSuggestion": "High-energy outdoor walk or light jog + posture stretching",
+          "meals": [
+            {
+              "id": "meal-d6-breakfast",
+              "mealType": "breakfast",
+              "name": "Greek Yogurt Berry Crunch Parfait",
+              "calories": 372,
+              "protein": 27,
+              "carbs": 43,
+              "fat": 8,
+              "portionSize": "1 tall glass (280g)",
+              "prepNotes": "Layer unsweetened Greek yogurt with antioxidant-rich blueberries, sliced strawberries, a sprinkle of rolled oats, and pumpkin seeds.",
+              "ingredients": [
+                {
+                  "name": "Greek Yogurt (Unsweetened)",
+                  "amount": "200g",
+                  "category": "dairy"
+                },
+                {
+                  "name": "Blueberries & Strawberries",
+                  "amount": "80g",
+                  "category": "fruits"
+                },
+                {
+                  "name": "Pumpkin Seeds",
+                  "amount": "15g",
+                  "category": "pantry"
+                },
+                {
+                  "name": "Raw Honey",
+                  "amount": "1 tsp",
+                  "category": "pantry"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-breakfast-0",
+                  "name": "Coconut Yogurt with Chia & Berry Compote",
+                  "calories": 353,
+                  "protein": 26,
+                  "carbs": 43,
+                  "fat": 7,
+                  "description": "100% dairy-free plant probiotic yogurt layered with warm berry reduction.",
+                  "ingredients": [
+                    {
+                      "name": "Coconut Milk Yogurt",
+                      "amount": "200g",
+                      "category": "dairy"
+                    },
+                    {
+                      "name": "Mixed Berries",
+                      "amount": "80g",
+                      "category": "fruits"
+                    },
+                    {
+                      "name": "Chia Seeds",
+                      "amount": "15g",
+                      "category": "pantry"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d6-mid_morning",
+              "mealType": "mid_morning",
+              "name": "Whey or Pea Protein Shake with Coconut Water",
+              "calories": 196,
+              "protein": 25,
+              "carbs": 12,
+              "fat": 3,
+              "portionSize": "1 shaker (300ml)",
+              "prepNotes": "Shake 1 scoop clean protein powder with chilled natural coconut water and 1/2 banana for optimal electrolyte balance.",
+              "ingredients": [
+                {
+                  "name": "Protein Powder",
+                  "amount": "30g",
+                  "category": "protein"
+                },
+                {
+                  "name": "Fresh Coconut Water",
+                  "amount": "250ml",
+                  "category": "fruits"
+                },
+                {
+                  "name": "Banana",
+                  "amount": "1/2 fruit",
+                  "category": "fruits"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-mid_morning-0",
+                  "name": "Plant Pea Protein Shake (Dairy-Free)",
+                  "calories": 186,
+                  "protein": 24,
+                  "carbs": 12,
+                  "fat": 3,
+                  "description": "Hypoallergenic vegan isolate protein blended with water and cinnamon.",
+                  "ingredients": [
+                    {
+                      "name": "Pea Protein Isolate",
+                      "amount": "30g",
+                      "category": "protein"
+                    },
+                    {
+                      "name": "Almond or Oat Milk",
+                      "amount": "250ml",
+                      "category": "dairy"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d6-lunch",
+              "mealType": "lunch",
+              "name": "Mediterranean Chickpea & Lentil Buddha Bowl",
+              "calories": 506,
+              "protein": 23,
+              "carbs": 70,
+              "fat": 14,
+              "portionSize": "1 generous bowl (320g)",
+              "prepNotes": "Spiced chickpeas, French green lentils, kalamata olives, cherry tomatoes, and baby greens drizzled with tahini-lemon dressing.",
+              "ingredients": [
+                {
+                  "name": "Cooked Chickpeas",
+                  "amount": "120g",
+                  "category": "grains"
+                },
+                {
+                  "name": "Cooked Green Lentils",
+                  "amount": "80g",
+                  "category": "grains"
+                },
+                {
+                  "name": "Cherry Tomatoes & Cucumber",
+                  "amount": "100g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Tahini (Sesame Paste)",
+                  "amount": "15g",
+                  "category": "pantry"
+                },
+                {
+                  "name": "Fresh Lemon Juice",
+                  "amount": "1 tbsp",
+                  "category": "fruits"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-lunch-0",
+                  "name": "Kidney Bean (Rajma) Bowl with Steamed Brown Rice",
+                  "calories": 481,
+                  "protein": 22,
+                  "carbs": 70,
+                  "fat": 13,
+                  "description": "North Indian style aromatic kidney bean curry with steamed whole grains.",
+                  "ingredients": [
+                    {
+                      "name": "Red Kidney Beans (Rajma)",
+                      "amount": "120g",
+                      "category": "grains"
+                    },
+                    {
+                      "name": "Brown Rice",
+                      "amount": "70g",
+                      "category": "grains"
+                    },
+                    {
+                      "name": "Onion, Ginger & Tomato Gravy",
+                      "amount": "80g",
+                      "category": "vegetables"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d6-snack",
+              "mealType": "evening_snack",
+              "name": "Roasted Makhana (Fox Nuts) & Steamed Edamame",
+              "calories": 165,
+              "protein": 9,
+              "carbs": 23,
+              "fat": 3,
+              "portionSize": "1 small bowl (40g makhana + 50g edamame)",
+              "prepNotes": "Lightly roast crunchy makhana with a drop of cold-pressed ghee and pink Himalayan salt. Pair with warm steamed edamame pods.",
+              "ingredients": [
+                {
+                  "name": "Phool Makhana (Fox Nuts)",
+                  "amount": "35g",
+                  "category": "grains"
+                },
+                {
+                  "name": "Edamame Pods",
+                  "amount": "50g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Cold-Pressed Ghee",
+                  "amount": "1/2 tsp",
+                  "category": "dairy"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-snack-0",
+                  "name": "Hummus with Carrot & Cucumber Batons",
+                  "calories": 157,
+                  "protein": 9,
+                  "carbs": 23,
+                  "fat": 3,
+                  "description": "Silky chickpea hummus with crisp garden crudités. 100% dairy-free.",
+                  "ingredients": [
+                    {
+                      "name": "Chickpea Hummus",
+                      "amount": "50g",
+                      "category": "pantry"
+                    },
+                    {
+                      "name": "Carrot & Cucumber Sticks",
+                      "amount": "120g",
+                      "category": "vegetables"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d6-dinner",
+              "mealType": "dinner",
+              "name": "Stir-Fried Tofu with Asian Greens & Jasmine Rice",
+              "calories": 475,
+              "protein": 25,
+              "carbs": 60,
+              "fat": 14,
+              "portionSize": "1 generous wok bowl",
+              "prepNotes": "Crisp pan-browned tofu tossed with bok choy, snap peas, bell peppers in a ginger-tamari glaze. Served over steamed fragrant jasmine rice.",
+              "ingredients": [
+                {
+                  "name": "Organic Firm Tofu",
+                  "amount": "160g",
+                  "category": "protein"
+                },
+                {
+                  "name": "Bok Choy & Snap Peas",
+                  "amount": "150g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Jasmine Rice",
+                  "amount": "65g dry",
+                  "category": "grains"
+                },
+                {
+                  "name": "Sesame Oil & Tamari (Gluten-Free)",
+                  "amount": "1 tbsp",
+                  "category": "pantry"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-dinner-0",
+                  "name": "Paneer & Capsicum Bhurji with Multigrain Phulkas",
+                  "calories": 451,
+                  "protein": 24,
+                  "carbs": 60,
+                  "fat": 13,
+                  "description": "Spiced scrambled cottage cheese with soft whole wheat flatbreads.",
+                  "ingredients": [
+                    {
+                      "name": "Fresh Paneer",
+                      "amount": "130g",
+                      "category": "dairy"
+                    },
+                    {
+                      "name": "Green Bell Pepper & Onion",
+                      "amount": "100g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Whole Wheat Atta",
+                      "amount": "60g",
+                      "category": "grains"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d6-bedtime",
+              "mealType": "bedtime",
+              "name": "Wholesome Nourish Bowl (bedtime)",
+              "calories": 598,
+              "protein": 38,
+              "carbs": 47,
+              "fat": 12,
+              "portionSize": "1 plate",
+              "prepNotes": "Fresh whole food combination tailored to your dietary exclusions.",
+              "ingredients": [
+                {
+                  "name": "Steamed Seasonal Greens",
+                  "amount": "150g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Complex Carbohydrates (Rice/Millet)",
+                  "amount": "60g",
+                  "category": "grains"
+                },
+                {
+                  "name": "Clean Protein Source",
+                  "amount": "100g",
+                  "category": "protein"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-bedtime-generic",
+                  "name": "Quick Lentil & Steamed Veggies Plate",
+                  "calories": 598,
+                  "protein": 38,
+                  "carbs": 47,
+                  "fat": 12,
+                  "description": "Allergy-safe balanced alternative with matched macros.",
+                  "ingredients": [
+                    {
+                      "name": "Seasonal Mixed Vegetables",
+                      "amount": "120g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Whole Grain / Seed Base",
+                      "amount": "50g",
+                      "category": "grains"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            }
+          ]
+        },
+        {
+          "dayNumber": 7,
+          "dayLabel": "Day 7 — Sunday",
+          "dailyCalories": 2315,
+          "dailyProtein": 120,
+          "dailyHydrationMl": 2800,
+          "exerciseSuggestion": "Rest & reset: Mindful breathing, mobility flow & weekly prep",
+          "meals": [
+            {
+              "id": "meal-d7-breakfast",
+              "mealType": "breakfast",
+              "name": "Spiced Masala Rolled Oats & Chia Bowl",
+              "calories": 379,
+              "protein": 16,
+              "carbs": 56,
+              "fat": 10,
+              "portionSize": "1 medium bowl (250g)",
+              "prepNotes": "Cook rolled oats in water or almond milk with turmeric, cumin, and mild green chillies. Top with roasted chia seeds and chopped cilantro.",
+              "ingredients": [
+                {
+                  "name": "Rolled Oats",
+                  "amount": "60g",
+                  "category": "grains"
+                },
+                {
+                  "name": "Chia Seeds",
+                  "amount": "15g",
+                  "category": "pantry"
+                },
+                {
+                  "name": "Almond Milk",
+                  "amount": "150ml",
+                  "category": "dairy"
+                },
+                {
+                  "name": "Mixed Spices (Turmeric, Cumin)",
+                  "amount": "5g",
+                  "category": "pantry"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-breakfast-0",
+                  "name": "Moong Dal Cheela with Mint Chutney",
+                  "calories": 360,
+                  "protein": 15,
+                  "carbs": 56,
+                  "fat": 9,
+                  "description": "Savory lentil crepes rich in plant protein, zero gluten.",
+                  "ingredients": [
+                    {
+                      "name": "Yellow Moong Dal",
+                      "amount": "70g",
+                      "category": "grains"
+                    },
+                    {
+                      "name": "Fresh Mint & Coriander",
+                      "amount": "30g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Olive Oil",
+                      "amount": "1 tsp",
+                      "category": "pantry"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d7-mid_morning",
+              "mealType": "mid_morning",
+              "name": "Roasted Spiced Chickpeas & Green Tea",
+              "calories": 180,
+              "protein": 8,
+              "carbs": 26,
+              "fat": 4,
+              "portionSize": "1/2 cup (60g)",
+              "prepNotes": "Crispy air-fried or oven-roasted chickpeas dusted with chaat masala and smoked paprika. Accompanied by fresh brewed antioxidant green tea.",
+              "ingredients": [
+                {
+                  "name": "Kabuli Chickpeas",
+                  "amount": "60g dry weight",
+                  "category": "grains"
+                },
+                {
+                  "name": "Chaat Masala & Paprika",
+                  "amount": "3g",
+                  "category": "pantry"
+                },
+                {
+                  "name": "Green Tea Bag",
+                  "amount": "1 bag",
+                  "category": "pantry"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-mid_morning-generic",
+                  "name": "Quick Lentil & Steamed Veggies Plate",
+                  "calories": 180,
+                  "protein": 8,
+                  "carbs": 26,
+                  "fat": 4,
+                  "description": "Allergy-safe balanced alternative with matched macros.",
+                  "ingredients": [
+                    {
+                      "name": "Seasonal Mixed Vegetables",
+                      "amount": "120g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Whole Grain / Seed Base",
+                      "amount": "50g",
+                      "category": "grains"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d7-lunch",
+              "mealType": "lunch",
+              "name": "Grilled Paneer Tikka with Brown Basmati & Cucumber Raita",
+              "calories": 539,
+              "protein": 28,
+              "carbs": 58,
+              "fat": 20,
+              "portionSize": "1 plate (150g paneer + 1 cup rice)",
+              "prepNotes": "Marinate low-fat cottage cheese (paneer) in yogurt and spices. Grill with bell peppers and onions. Serve alongside nutty brown rice and cooling cucumber raita.",
+              "ingredients": [
+                {
+                  "name": "Paneer (Low-Fat Cottage Cheese)",
+                  "amount": "140g",
+                  "category": "dairy"
+                },
+                {
+                  "name": "Brown Basmati Rice",
+                  "amount": "70g uncooked",
+                  "category": "grains"
+                },
+                {
+                  "name": "Bell Peppers & Onions",
+                  "amount": "100g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Curd (Yogurt)",
+                  "amount": "80g",
+                  "category": "dairy"
+                },
+                {
+                  "name": "Cucumber",
+                  "amount": "50g",
+                  "category": "vegetables"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-lunch-0",
+                  "name": "Tofu & Edamame Brown Rice Bowl",
+                  "calories": 512,
+                  "protein": 27,
+                  "carbs": 58,
+                  "fat": 18,
+                  "description": "Marinated pan-seared organic tofu with steamed edamame and brown rice.",
+                  "ingredients": [
+                    {
+                      "name": "Extra Firm Tofu",
+                      "amount": "150g",
+                      "category": "protein"
+                    },
+                    {
+                      "name": "Shelled Edamame",
+                      "amount": "50g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Brown Rice",
+                      "amount": "70g uncooked",
+                      "category": "grains"
+                    }
+                  ]
+                },
+                {
+                  "id": "alt-lunch-1",
+                  "name": "Dal Makhani (Low Cream) with Missi Roti & Kachumber Salad",
+                  "calories": 512,
+                  "protein": 27,
+                  "carbs": 58,
+                  "fat": 18,
+                  "description": "Slow-cooked black lentils in tomato reduction with chickpea flatbread.",
+                  "ingredients": [
+                    {
+                      "name": "Black Urad Dal & Rajma",
+                      "amount": "70g",
+                      "category": "grains"
+                    },
+                    {
+                      "name": "Besan / Wheat Flour",
+                      "amount": "60g",
+                      "category": "grains"
+                    },
+                    {
+                      "name": "Cucumber & Tomatoes",
+                      "amount": "100g",
+                      "category": "vegetables"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d7-snack",
+              "mealType": "evening_snack",
+              "name": "Roasted Makhana (Fox Nuts) & Steamed Edamame",
+              "calories": 160,
+              "protein": 9,
+              "carbs": 22,
+              "fat": 3,
+              "portionSize": "1 small bowl (40g makhana + 50g edamame)",
+              "prepNotes": "Lightly roast crunchy makhana with a drop of cold-pressed ghee and pink Himalayan salt. Pair with warm steamed edamame pods.",
+              "ingredients": [
+                {
+                  "name": "Phool Makhana (Fox Nuts)",
+                  "amount": "35g",
+                  "category": "grains"
+                },
+                {
+                  "name": "Edamame Pods",
+                  "amount": "50g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Cold-Pressed Ghee",
+                  "amount": "1/2 tsp",
+                  "category": "dairy"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-snack-0",
+                  "name": "Hummus with Carrot & Cucumber Batons",
+                  "calories": 152,
+                  "protein": 9,
+                  "carbs": 22,
+                  "fat": 3,
+                  "description": "Silky chickpea hummus with crisp garden crudités. 100% dairy-free.",
+                  "ingredients": [
+                    {
+                      "name": "Chickpea Hummus",
+                      "amount": "50g",
+                      "category": "pantry"
+                    },
+                    {
+                      "name": "Carrot & Cucumber Sticks",
+                      "amount": "120g",
+                      "category": "vegetables"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d7-dinner",
+              "mealType": "dinner",
+              "name": "Yellow Dal Tadka with Steamed Rice & Sauteed Methi/Palak",
+              "calories": 479,
+              "protein": 22,
+              "carbs": 66,
+              "fat": 12,
+              "portionSize": "1 bowl dal + 1 cup rice + 1 cup greens",
+              "prepNotes": "Comforting toor & moong dal tempered with cumin, garlic, and tomatoes. Served with aromatic basmati rice and stir-fried garlic spinach.",
+              "ingredients": [
+                {
+                  "name": "Toor & Moong Dal",
+                  "amount": "70g dry",
+                  "category": "grains"
+                },
+                {
+                  "name": "Basmati Rice",
+                  "amount": "65g dry",
+                  "category": "grains"
+                },
+                {
+                  "name": "Fresh Spinach (Palak)",
+                  "amount": "150g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Tomatoes & Garlic",
+                  "amount": "50g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Mustard Oil or Olive Oil",
+                  "amount": "1 tsp",
+                  "category": "pantry"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-dinner-0",
+                  "name": "Lentil Vegetable Soup with Sourdough Bread",
+                  "calories": 455,
+                  "protein": 21,
+                  "carbs": 66,
+                  "fat": 11,
+                  "description": "Hearty European style brown lentil potage with rosemary.",
+                  "ingredients": [
+                    {
+                      "name": "Brown Lentils",
+                      "amount": "70g",
+                      "category": "grains"
+                    },
+                    {
+                      "name": "Carrots, Celery & Leeks",
+                      "amount": "120g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Sourdough Toast",
+                      "amount": "1 slice",
+                      "category": "grains"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            },
+            {
+              "id": "meal-d7-bedtime",
+              "mealType": "bedtime",
+              "name": "Wholesome Nourish Bowl (bedtime)",
+              "calories": 578,
+              "protein": 37,
+              "carbs": 45,
+              "fat": 12,
+              "portionSize": "1 plate",
+              "prepNotes": "Fresh whole food combination tailored to your dietary exclusions.",
+              "ingredients": [
+                {
+                  "name": "Steamed Seasonal Greens",
+                  "amount": "150g",
+                  "category": "vegetables"
+                },
+                {
+                  "name": "Complex Carbohydrates (Rice/Millet)",
+                  "amount": "60g",
+                  "category": "grains"
+                },
+                {
+                  "name": "Clean Protein Source",
+                  "amount": "100g",
+                  "category": "protein"
+                }
+              ],
+              "alternatives": [
+                {
+                  "id": "alt-bedtime-generic",
+                  "name": "Quick Lentil & Steamed Veggies Plate",
+                  "calories": 578,
+                  "protein": 37,
+                  "carbs": 45,
+                  "fat": 12,
+                  "description": "Allergy-safe balanced alternative with matched macros.",
+                  "ingredients": [
+                    {
+                      "name": "Seasonal Mixed Vegetables",
+                      "amount": "120g",
+                      "category": "vegetables"
+                    },
+                    {
+                      "name": "Whole Grain / Seed Base",
+                      "amount": "50g",
+                      "category": "grains"
+                    }
+                  ]
+                }
+              ],
+              "isCompleted": false
+            }
+          ]
+        }
+      ],
+      "createdAt": "2026-09-06T18:17:10.302Z"
+    }
+  },
+  "groceryLists": {
+    "demo-user-rahul": [
+      {
+        "id": "custom-1788718645965",
+        "userId": "demo-user-rahul",
+        "name": "Organic Chia Seeds",
+        "amount": "250g",
+        "category": "pantry",
+        "isPurchased": true,
+        "isCustom": true,
+        "createdAt": "2026-09-06T18:17:25.965Z"
+      },
+      {
+        "id": "groc-1788718630302-10",
+        "userId": "demo-user-rahul",
+        "name": "Bell Peppers & Onions",
+        "amount": "100g",
+        "category": "vegetables",
+        "isPurchased": true,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-37",
+        "userId": "demo-user-rahul",
+        "name": "Bok Choy & Snap Peas",
+        "amount": "150g",
+        "category": "vegetables",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-33",
+        "userId": "demo-user-rahul",
+        "name": "Cherry Tomatoes & Cucumber",
+        "amount": "100g",
+        "category": "vegetables",
+        "isPurchased": true,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-12",
+        "userId": "demo-user-rahul",
+        "name": "Cucumber",
+        "amount": "50g",
+        "category": "vegetables",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-14",
+        "userId": "demo-user-rahul",
+        "name": "Edamame Pods",
+        "amount": "50g",
+        "category": "vegetables",
+        "isPurchased": true,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-18",
+        "userId": "demo-user-rahul",
+        "name": "Fresh Spinach (palak)",
+        "amount": "150g",
+        "category": "vegetables",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-21",
+        "userId": "demo-user-rahul",
+        "name": "Steamed Seasonal Greens",
+        "amount": "150g",
+        "category": "vegetables",
+        "isPurchased": true,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-19",
+        "userId": "demo-user-rahul",
+        "name": "Tomatoes & Garlic",
+        "amount": "50g",
+        "category": "vegetables",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-30",
+        "userId": "demo-user-rahul",
+        "name": "Banana",
+        "amount": "1/2 fruit",
+        "category": "fruits",
+        "isPurchased": true,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-25",
+        "userId": "demo-user-rahul",
+        "name": "Blueberries & Strawberries",
+        "amount": "80g",
+        "category": "fruits",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-29",
+        "userId": "demo-user-rahul",
+        "name": "Fresh Coconut Water",
+        "amount": "250ml",
+        "category": "fruits",
+        "isPurchased": true,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-35",
+        "userId": "demo-user-rahul",
+        "name": "Fresh Lemon Juice",
+        "amount": "1 tbsp",
+        "category": "fruits",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-17",
+        "userId": "demo-user-rahul",
+        "name": "Basmati Rice",
+        "amount": "65g dry",
+        "category": "grains",
+        "isPurchased": true,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-9",
+        "userId": "demo-user-rahul",
+        "name": "Brown Basmati Rice",
+        "amount": "70g uncooked",
+        "category": "grains",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-22",
+        "userId": "demo-user-rahul",
+        "name": "Complex Carbohydrates (rice/millet)",
+        "amount": "60g",
+        "category": "grains",
+        "isPurchased": true,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-31",
+        "userId": "demo-user-rahul",
+        "name": "Cooked Chickpeas",
+        "amount": "120g",
+        "category": "grains",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-32",
+        "userId": "demo-user-rahul",
+        "name": "Cooked Green Lentils",
+        "amount": "80g",
+        "category": "grains",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-38",
+        "userId": "demo-user-rahul",
+        "name": "Jasmine Rice",
+        "amount": "65g dry",
+        "category": "grains",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-5",
+        "userId": "demo-user-rahul",
+        "name": "Kabuli Chickpeas",
+        "amount": "60g dry weight",
+        "category": "grains",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-13",
+        "userId": "demo-user-rahul",
+        "name": "Phool Makhana (fox Nuts)",
+        "amount": "35g",
+        "category": "grains",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-1",
+        "userId": "demo-user-rahul",
+        "name": "Rolled Oats",
+        "amount": "60g",
+        "category": "grains",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-16",
+        "userId": "demo-user-rahul",
+        "name": "Toor & Moong Dal",
+        "amount": "70g dry",
+        "category": "grains",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-23",
+        "userId": "demo-user-rahul",
+        "name": "Clean Protein Source",
+        "amount": "100g",
+        "category": "protein",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-36",
+        "userId": "demo-user-rahul",
+        "name": "Organic Firm Tofu",
+        "amount": "160g",
+        "category": "protein",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-28",
+        "userId": "demo-user-rahul",
+        "name": "Protein Powder",
+        "amount": "30g",
+        "category": "protein",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-3",
+        "userId": "demo-user-rahul",
+        "name": "Almond Milk",
+        "amount": "150ml",
+        "category": "dairy",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-15",
+        "userId": "demo-user-rahul",
+        "name": "Cold-pressed Ghee",
+        "amount": "1/2 tsp",
+        "category": "dairy",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-11",
+        "userId": "demo-user-rahul",
+        "name": "Curd (yogurt)",
+        "amount": "80g",
+        "category": "dairy",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-24",
+        "userId": "demo-user-rahul",
+        "name": "Greek Yogurt (unsweetened)",
+        "amount": "200g",
+        "category": "dairy",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-8",
+        "userId": "demo-user-rahul",
+        "name": "Paneer (low-fat Cottage Cheese)",
+        "amount": "140g",
+        "category": "dairy",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-6",
+        "userId": "demo-user-rahul",
+        "name": "Chaat Masala & Paprika",
+        "amount": "3g",
+        "category": "pantry",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-2",
+        "userId": "demo-user-rahul",
+        "name": "Chia Seeds",
+        "amount": "15g",
+        "category": "pantry",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-7",
+        "userId": "demo-user-rahul",
+        "name": "Green Tea Bag",
+        "amount": "1 bag",
+        "category": "pantry",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-4",
+        "userId": "demo-user-rahul",
+        "name": "Mixed Spices (turmeric, Cumin)",
+        "amount": "5g",
+        "category": "pantry",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-20",
+        "userId": "demo-user-rahul",
+        "name": "Mustard Oil Or Olive Oil",
+        "amount": "1 tsp",
+        "category": "pantry",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-26",
+        "userId": "demo-user-rahul",
+        "name": "Pumpkin Seeds",
+        "amount": "15g",
+        "category": "pantry",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-27",
+        "userId": "demo-user-rahul",
+        "name": "Raw Honey",
+        "amount": "1 tsp",
+        "category": "pantry",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-39",
+        "userId": "demo-user-rahul",
+        "name": "Sesame Oil & Tamari (gluten-free)",
+        "amount": "1 tbsp",
+        "category": "pantry",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      },
+      {
+        "id": "groc-1788718630302-34",
+        "userId": "demo-user-rahul",
+        "name": "Tahini (sesame Paste)",
+        "amount": "15g",
+        "category": "pantry",
+        "isPurchased": false,
+        "isCustom": false,
+        "createdAt": "2026-09-06T18:17:10.302Z"
+      }
+    ]
+  },
+  "userAchievements": {
+    "demo-user-rahul": [
+      {
+        "achievementId": "streak-3",
+        "title": "Habit Igniter",
+        "description": "Logged your health metrics 3 days in a row.",
+        "icon": "🔥",
+        "threshold": 3,
+        "currentValue": 3,
+        "isUnlocked": true,
+        "unlockedAt": "2026-09-02T18:17:10.303Z"
+      },
+      {
+        "achievementId": "streak-7",
+        "title": "Consistency Champion",
+        "description": "Maintained a 7-day daily tracking streak.",
+        "icon": "⚡",
+        "threshold": 7,
+        "currentValue": 7,
+        "isUnlocked": true,
+        "unlockedAt": "2026-09-03T18:17:10.303Z"
+      },
+      {
+        "achievementId": "hydration-master",
+        "title": "Hydration Hero",
+        "description": "Hit your daily water target 5 days this week.",
+        "icon": "💧",
+        "threshold": 5,
+        "currentValue": 5,
+        "isUnlocked": true,
+        "unlockedAt": "2026-09-04T18:17:10.303Z"
+      },
+      {
+        "achievementId": "steps-10k",
+        "title": "10K Steps Club",
+        "description": "Walked 10,000+ steps in a single day.",
+        "icon": "🚶",
+        "threshold": 10000,
+        "currentValue": 10000,
+        "isUnlocked": true,
+        "unlockedAt": "2026-09-05T18:17:10.303Z"
+      },
+      {
+        "achievementId": "diet-streak",
+        "title": "Mindful Eater",
+        "description": "Completed 85%+ of planned healthy meals for 7 days.",
+        "icon": "🥗",
+        "threshold": 7,
+        "currentValue": 5,
+        "isUnlocked": false
+      },
+      {
+        "achievementId": "first-week",
+        "title": "First Week Complete",
+        "description": "Successfully finished your first 7-day personalized wellness cycle.",
+        "icon": "🏆",
+        "threshold": 7,
+        "currentValue": 5,
+        "isUnlocked": false
+      }
+    ]
+  },
+  "chatMessages": {
+    "demo-user-rahul": [
+      {
+        "id": "msg-welcome",
+        "role": "assistant",
+        "content": "Hello Rahul! 👋 I'm your Vitalis Health Assistant. I've personalized your nutrition plan for **moderate weight loss** with **vegetarian, peanut-free meals** at **2,100 kcal/day**.\n\nHow can I support your health today? You can ask me for meal swaps, pre-workout fuel ideas, or tips to boost afternoon hydration!",
+        "timestamp": "2026-09-06T17:17:10.303Z",
+        "suggestions": [
+          "What should I eat for dinner?",
+          "Give me a high-protein vegetarian meal",
+          "Suggest a quick breakfast swap"
+        ]
+      },
+      {
+        "id": "msg-user-1788718630348",
+        "role": "user",
+        "content": "Give me a high-protein vegetarian snack",
+        "timestamp": "2026-09-06T18:17:10.348Z"
+      },
+      {
+        "id": "msg-ai-1788718630354",
+        "role": "assistant",
+        "content": "Here are high-protein choices tailored to your **vegetarian** preference *(Noted allergies: peanuts — strictly avoided)*:\n\n1. **Roasted Spiced Edamame & Makhana**: ~14g protein, low glycemic load, rich in fiber.\n2. **Tempeh or Spiced Tofu Cubes with Chia Dressing**: ~20g plant protein.\n3. **Lupini Beans or Sprouted Moong Salad with Lemon & Mint**: ~15g clean plant protein.\n4. **Pea & Brown Rice Protein Shake with Almond Milk**: ~25g complete amino acid profile.\n\n*Daily Target reminder: Your target is **148g** protein/day to support your lose weight goal.*",
+        "timestamp": "2026-09-06T18:17:10.354Z",
+        "suggestions": [
+          "Give me a quick 10-minute breakfast",
+          "What should I eat before a workout?",
+          "How to stay full on fewer calories"
+        ]
+      },
+      {
+        "id": "msg-user-1788718635931",
+        "role": "user",
+        "content": "I have severe chest pain and dizziness, what should I do?",
+        "timestamp": "2026-09-06T18:17:15.931Z"
+      },
+      {
+        "id": "msg-ai-1788718635934",
+        "role": "assistant",
+        "content": "⚠️ **Important Health Notice**\n\nI am your AI Wellness & Nutrition Companion, but I cannot diagnose medical conditions, provide medical treatment, or prescribe medications. If you or someone you know is experiencing acute symptoms, pain, or high-risk medical concerns, please consult a licensed physician, registered dietitian, or contact emergency health services immediately.",
+        "timestamp": "2026-09-06T18:17:15.934Z",
+        "suggestions": [
+          "Suggest a balanced high-protein snack",
+          "What can I eat for dinner tonight?",
+          "How can I hit my water target?"
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "demo-user-rahul": {
+      "unitSystem": "metric",
+      "theme": "light",
+      "notifications": {
+        "mealReminders": true,
+        "waterReminders": true,
+        "workoutReminders": true,
+        "sleepReminders": true,
+        "weeklyDigest": true,
+        "emailNotifications": false
+      }
+    }
+  }
+}
