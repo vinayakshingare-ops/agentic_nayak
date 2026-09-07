@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, viewport-fit=cover" />
+  <title>Vitalis | AI Personalized Health & Diet Companion</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            emerald: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+            },
+            warm: {
+              50: '#fbfbf9',
+              100: '#f5f5f4',
+              200: '#e7e5e4',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #fbfbf9; }
+    .active-tab { background-color: #f0fdf4; color: #15803d; font-weight: 700; border-color: #bbf7d0; }
+    .mobile-active-tab { color: #059669; font-weight: 700; }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+  </style>
+</head>
+<body class="text-slate-900 min-h-screen flex flex-col pb-24 md:pb-12 selection:bg-emerald-100 selection:text-emerald-900">
+
+  <!-- TOP HEADER -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80 px-4 sm:px-8 py-3.5">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-6">
+        <div class="flex items-center gap-2.5 cursor-pointer" onclick="switchTab('dashboard')">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-500 flex items-center justify-center text-white shadow-sm font-bold text-lg">
+            🌱
+          </div>
+          <div>
+            <span class="text-xl font-extrabold tracking-tight text-slate-900">Vitalis<span class="text-emerald-600">.</span></span>
+            <span class="hidden sm:inline-block text-[10px] font-bold uppercase tracking-wider bg-emerald-50 text-emerald-800 px-2 py-0.5 rounded-full border border-emerald-200 ml-2">Health Companion</span>
+          </div>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-1 text-xs font-semibold">
+          <button onclick="switchTab('dashboard')" class="nav-btn px-3 py-1.5 rounded-xl transition-all" data-tab="dashboard">Dashboard</button>
+          <button onclick="switchTab('diet')" class="nav-btn px-3 py-1.5 rounded-xl transition-all" data-tab="diet">Diet Plan</button>
+          <button onclick="switchTab('progress')" class="nav-btn px-3 py-1.5 rounded-xl transition-all" data-tab="progress">Progress</button>
+          <button onclick="switchTab('tracking')" class="nav-btn px-3 py-1.5 rounded-xl transition-all" data-tab="tracking">Track (+)</button>
+          <button onclick="switchTab('exercise')" class="nav-btn px-3 py-1.5 rounded-xl transition-all" data-tab="exercise">Workouts</button>
+          <button onclick="switchTab('grocery')" class="nav-btn px-3 py-1.5 rounded-xl transition-all" data-tab="grocery">Grocery</button>
+          <button onclick="switchTab('assistant')" class="nav-btn px-3 py-1.5 rounded-xl transition-all text-emerald-700 font-bold" data-tab="assistant">AI Assistant ✨</button>
+        </nav>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold">
+          <span>🔥</span>
+          <span>5d Streak</span>
+        </div>
+        <div class="w-8 h-8 rounded-xl bg-emerald-100 border border-emerald-300 text-emerald-900 font-bold text-xs flex items-center justify-center">
+          R
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-8 py-6 w-full flex-1">
+
+    <!-- ==================== 1. DASHBOARD TAB ==================== -->
+    <section id="tab-dashboard" class="tab-content space-y-6">
+      <!-- Greeting Banner -->
+      <div class="rounded-3xl bg-white border border-slate-200/80 p-6 sm:p-8 shadow-sm relative overflow-hidden">
+        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">Today's Rhythm</span>
+              <span class="text-xs text-slate-400" id="current-date-label">Today</span>
+            </div>
+            <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Good morning, Rahul</h1>
+            <p class="text-xs sm:text-sm text-slate-500 max-w-xl mt-1 leading-relaxed">
+              You are maintaining steady momentum! Caloric target: <span class="font-bold text-slate-700">2,100 kcal</span> with <span class="font-bold text-slate-700">130g protein</span>.
+            </p>
+          </div>
+
+          <!-- Score Card -->
+          <div class="flex items-center gap-4 bg-emerald-50/70 p-4 rounded-2xl border border-emerald-200/80">
+            <div class="relative w-20 h-20 flex items-center justify-center rounded-full bg-white border-4 border-emerald-500 shadow-sm font-extrabold text-xl text-emerald-700">
+              <span id="score-display">84</span>
+              <span class="text-[9px] text-slate-400 absolute bottom-1 font-semibold">/ 100</span>
+            </div>
+            <div>
+              <span class="text-[10px] font-bold uppercase text-slate-400">Daily Wellness Index</span>
+              <h4 class="text-base font-bold text-slate-900">Strong Momentum</h4>
+              <p class="text-[11px] text-slate-500">Nutrition, hydration & steps</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Action Toolbar -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-1 text-xs">
+        <span class="font-bold text-slate-500 whitespace-nowrap">Quick Actions:</span>
+        <button onclick="addWater(250)" class="px-3 py-1.5 rounded-xl border border-sky-200 bg-white hover:bg-sky-50 text-sky-700 font-bold whitespace-nowrap flex items-center gap-1 shadow-sm">
+          💧 +1 Glass (250ml)
+        </button>
+        <button onclick="addWater(500)" class="px-3 py-1.5 rounded-xl border border-sky-200 bg-white hover:bg-sky-50 text-sky-700 font-bold whitespace-nowrap flex items-center gap-1 shadow-sm">
+          💧 +500ml Bottle
+        </button>
+        <button onclick="addSteps(2500)" class="px-3 py-1.5 rounded-xl border border-amber-200 bg-white hover:bg-amber-50 text-amber-800 font-bold whitespace-nowrap flex items-center gap-1 shadow-sm">
+          🚶 +2,500 Steps
+        </button>
+        <button onclick="switchTab('tracking')" class="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-bold whitespace-nowrap flex items-center gap-1 shadow-sm">
+          ⚖️ Log Weight
+        </button>
+      </div>
+
+      <!-- Metrics Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-center text-xs text-slate-500 font-bold uppercase">
+              <span>Calories</span>
+              <span class="text-emerald-600">🍲</span>
+            </div>
+            <div class="text-2xl font-extrabold text-slate-900 mt-1">
+              <span id="cal-display">1,950</span> <span class="text-xs font-normal text-slate-400">/ 2,100 kcal</span>
+            </div>
+          </div>
+          <div class="mt-4 pt-2 border-t border-slate-100">
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden mb-1">
+              <div class="bg-emerald-500 h-full w-[92%] rounded-full"></div>
+            </div>
+            <span class="text-[11px] text-slate-500 font-medium">150 kcal remaining</span>
+          </div>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-center text-xs text-slate-500 font-bold uppercase">
+              <span>Protein</span>
+              <span class="text-teal-600">🍗</span>
+            </div>
+            <div class="text-2xl font-extrabold text-slate-900 mt-1">
+              <span id="protein-display">118</span> <span class="text-xs font-normal text-slate-400">/ 130 g</span>
+            </div>
+          </div>
+          <div class="mt-4 pt-2 border-t border-slate-100">
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden mb-1">
+              <div class="bg-teal-500 h-full w-[90%] rounded-full"></div>
+            </div>
+            <span class="text-[11px] text-slate-500 font-medium">90% of daily target</span>
+          </div>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-center text-xs text-slate-500 font-bold uppercase">
+              <span>Hydration</span>
+              <span class="text-sky-600">💧</span>
+            </div>
+            <div class="text-2xl font-extrabold text-slate-900 mt-1">
+              <span id="water-glasses">8</span> <span class="text-xs font-normal text-slate-400">/ 10 glasses</span>
+            </div>
+          </div>
+          <div class="mt-4 pt-2 border-t border-slate-100">
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden mb-1">
+              <div id="water-bar" class="bg-sky-500 h-full w-[80%] rounded-full transition-all"></div>
+            </div>
+            <span id="water-ml-display" class="text-[11px] text-slate-500 font-medium">2,000 / 2,500 ml</span>
+          </div>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-center text-xs text-slate-500 font-bold uppercase">
+              <span>Daily Steps</span>
+              <span class="text-amber-600">🚶</span>
+            </div>
+            <div class="text-2xl font-extrabold text-slate-900 mt-1">
+              <span id="steps-display">7,420</span> <span class="text-xs font-normal text-slate-400">/ 10,000</span>
+            </div>
+          </div>
+          <div class="mt-4 pt-2 border-t border-slate-100">
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden mb-1">
+              <div id="steps-bar" class="bg-amber-500 h-full w-[74%] rounded-full transition-all"></div>
+            </div>
+            <span class="text-[11px] text-slate-500 font-medium">2,580 steps to goal</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Next Meal & Screening -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-1">Body Screening</span>
+          <div class="flex items-baseline justify-between mb-3">
+            <div>
+              <span class="text-3xl font-extrabold text-slate-900">82.4</span>
+              <span class="text-xs font-semibold text-slate-400 ml-1">kg</span>
+            </div>
+            <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">Target: 74 kg</span>
+          </div>
+          <div class="pt-3 border-t border-slate-100">
+            <div class="flex justify-between text-xs mb-1">
+              <span class="font-bold text-slate-700">BMI: 26.9</span>
+              <span class="font-bold text-amber-700">Overweight</span>
+            </div>
+            <div class="h-2 w-full rounded-full bg-slate-100 overflow-hidden flex my-2">
+              <div class="w-[20%] bg-sky-400"></div>
+              <div class="w-[30%] bg-emerald-500"></div>
+              <div class="w-[25%] bg-amber-500"></div>
+              <div class="w-[25%] bg-rose-500"></div>
+            </div>
+            <p class="text-[11px] text-slate-500">Estimated BMR: 1,785 kcal • TDEE: 2,767 kcal</p>
+          </div>
+        </div>
+
+        <div class="md:col-span-2 bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-xs font-bold uppercase text-emerald-700">Next Planned Meal • Dinner (8:00 PM)</span>
+              <button onclick="switchTab('diet')" class="text-xs font-bold text-emerald-600 hover:text-emerald-700">View Full Plan →</button>
+            </div>
+            <div class="p-4 rounded-xl bg-warm-50 border border-slate-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl p-2.5 rounded-xl bg-emerald-100">🍲</span>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-900">Yellow Dal Tadka with Steamed Rice & Garlic Methi</h4>
+                  <p class="text-xs text-slate-500">480 kcal • 22g protein • Vegetarian & Peanut-Free</p>
+                </div>
+              </div>
+              <button onclick="celebrateMeal()" class="w-full sm:w-auto px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold shadow-sm">
+                ✓ Mark as Eaten
+              </button>
+            </div>
+          </div>
+
+          <div class="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-900 flex items-start gap-2">
+            <span>💡</span>
+            <span><strong>Smart Recommendation:</strong> Your afternoon water intake has dipped. Drink 1 tall glass before starting your evening dinner.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 2. DIET TAB ==================== -->
+    <section id="tab-diet" class="tab-content hidden space-y-6">
+      <div class="flex justify-between items-center">
+        <div>
+          <span class="text-xs font-bold uppercase text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">Nutrition Plan</span>
+          <h2 class="text-2xl font-extrabold text-slate-900 mt-1">7-Day Meal Schedule</h2>
+        </div>
+        <button onclick="alert('Expanded to full 30-day architecture!')" class="text-xs font-bold bg-emerald-50 text-emerald-800 border border-emerald-200 px-3 py-1.5 rounded-xl">
+          Expand 30-Day Plan
+        </button>
+      </div>
+
+      <!-- Meal Cards List -->
+      <div class="space-y-4">
+        <!-- Breakfast -->
+        <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+          <div class="flex items-start gap-3.5">
+            <span class="text-2xl p-2.5 rounded-xl bg-amber-50">🍳</span>
+            <div>
+              <span class="text-[10px] font-bold uppercase text-emerald-700">Breakfast • 8:30 AM</span>
+              <h3 class="text-base font-bold text-slate-900">Spiced Masala Rolled Oats & Chia Bowl</h3>
+              <p class="text-xs text-slate-500 font-semibold mt-0.5">380 kcal • 16g protein • 56g carbs • 10g fat</p>
+              <p class="text-xs text-slate-600 mt-1">Cook oats in warm water or almond milk with turmeric and roasted chia seeds.</p>
+            </div>
+          </div>
+          <div class="flex gap-2 w-full sm:w-auto">
+            <button onclick="swapMealDemo('Breakfast')" class="px-3 py-1.5 border border-slate-200 hover:bg-slate-50 rounded-xl text-xs font-bold">Swap Meal</button>
+            <button onclick="celebrateMeal()" class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold">✓ Eaten</button>
+          </div>
+        </div>
+
+        <!-- Mid Morning -->
+        <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+          <div class="flex items-start gap-3.5">
+            <span class="text-2xl p-2.5 rounded-xl bg-sky-50">🍵</span>
+            <div>
+              <span class="text-[10px] font-bold uppercase text-emerald-700">Mid-Morning • 11:00 AM</span>
+              <h3 class="text-base font-bold text-slate-900">Roasted Spiced Chickpeas & Green Tea</h3>
+              <p class="text-xs text-slate-500 font-semibold mt-0.5">180 kcal • 8g protein • 26g carbs • 4g fat</p>
+              <p class="text-xs text-slate-600 mt-1">Air-fried crunchy chickpeas with chaat masala and fresh green tea.</p>
+            </div>
+          </div>
+          <div class="flex gap-2 w-full sm:w-auto">
+            <button onclick="swapMealDemo('Mid-Morning')" class="px-3 py-1.5 border border-slate-200 hover:bg-slate-50 rounded-xl text-xs font-bold">Swap Meal</button>
+            <button onclick="celebrateMeal()" class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold">✓ Eaten</button>
+          </div>
+        </div>
+
+        <!-- Lunch -->
+        <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+          <div class="flex items-start gap-3.5">
+            <span class="text-2xl p-2.5 rounded-xl bg-emerald-50">🥗</span>
+            <div>
+              <span class="text-[10px] font-bold uppercase text-emerald-700">Lunch • 1:30 PM</span>
+              <h3 class="text-base font-bold text-slate-900">Grilled Paneer Tikka with Brown Basmati & Cucumber Raita</h3>
+              <p class="text-xs text-slate-500 font-semibold mt-0.5">540 kcal • 28g protein • 58g carbs • 20g fat</p>
+              <p class="text-xs text-slate-600 mt-1">Marinated low-fat cottage cheese grilled with peppers alongside brown rice.</p>
+            </div>
+          </div>
+          <div class="flex gap-2 w-full sm:w-auto">
+            <button onclick="swapMealDemo('Lunch')" class="px-3 py-1.5 border border-slate-200 hover:bg-slate-50 rounded-xl text-xs font-bold">Swap Meal</button>
+            <button onclick="celebrateMeal()" class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold">✓ Eaten</button>
+          </div>
+        </div>
+
+        <!-- Dinner -->
+        <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+          <div class="flex items-start gap-3.5">
+            <span class="text-2xl p-2.5 rounded-xl bg-teal-50">🍲</span>
+            <div>
+              <span class="text-[10px] font-bold uppercase text-emerald-700">Dinner • 8:00 PM</span>
+              <h3 class="text-base font-bold text-slate-900">Yellow Dal Tadka with Steamed Rice & Garlic Methi</h3>
+              <p class="text-xs text-slate-500 font-semibold mt-0.5">480 kcal • 22g protein • 66g carbs • 12g fat</p>
+              <p class="text-xs text-slate-600 mt-1">Toor & moong dal with cumin and garlic tempered spinach greens.</p>
+            </div>
+          </div>
+          <div class="flex gap-2 w-full sm:w-auto">
+            <button onclick="swapMealDemo('Dinner')" class="px-3 py-1.5 border border-slate-200 hover:bg-slate-50 rounded-xl text-xs font-bold">Swap Meal</button>
+            <button onclick="celebrateMeal()" class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold">✓ Eaten</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. PROGRESS TAB ==================== -->
+    <section id="tab-progress" class="tab-content hidden space-y-6">
+      <div>
+        <span class="text-xs font-bold uppercase text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">Analytics</span>
+        <h2 class="text-2xl font-extrabold text-slate-900 mt-1">Progress & Habit Metrics</h2>
+      </div>
+
+      <!-- Weekly Insights Card -->
+      <div class="bg-gradient-to-br from-emerald-600 to-teal-700 text-white p-6 sm:p-8 rounded-3xl shadow-lg">
+        <span class="text-xs uppercase font-bold text-emerald-200">Your Week in Review</span>
+        <h3 class="text-2xl font-extrabold mt-1">You completed 88% of planned meals and logged 7,800 steps/day!</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6 pt-6 border-t border-white/20 text-xs">
+          <div>
+            <span class="text-emerald-100 block">Weight Delta</span>
+            <span class="text-xl font-bold">-0.8 kg</span>
+          </div>
+          <div>
+            <span class="text-emerald-100 block">Average Steps</span>
+            <span class="text-xl font-bold">7,820 / day</span>
+          </div>
+          <div>
+            <span class="text-emerald-100 block">Hydration Rate</span>
+            <span class="text-xl font-bold">8.4 glasses</span>
+          </div>
+          <div>
+            <span class="text-emerald-100 block">Best Consistency</span>
+            <span class="text-xl font-bold">Thursday (92/100)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Streaks Card -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm">
+        <h3 class="text-base font-bold text-slate-900 mb-4">Milestones & Streaks</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+          <div class="p-3 rounded-xl bg-amber-50 border border-amber-200">
+            <span class="text-2xl block">🔥</span>
+            <h4 class="text-xs font-bold text-slate-900 mt-1">5-Day Tracking</h4>
+            <span class="text-[10px] text-amber-800 font-semibold">Unlocked</span>
+          </div>
+          <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200">
+            <span class="text-2xl block">🥗</span>
+            <h4 class="text-xs font-bold text-slate-900 mt-1">Mindful Eater</h4>
+            <span class="text-[10px] text-emerald-800 font-semibold">Unlocked</span>
+          </div>
+          <div class="p-3 rounded-xl bg-sky-50 border border-sky-200">
+            <span class="text-2xl block">💧</span>
+            <h4 class="text-xs font-bold text-slate-900 mt-1">Hydration Hero</h4>
+            <span class="text-[10px] text-sky-800 font-semibold">Unlocked</span>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+            <span class="text-2xl block">🏆</span>
+            <h4 class="text-xs font-bold text-slate-900 mt-1">30-Day Master</h4>
+            <span class="text-[10px] text-slate-500 font-semibold">14 / 30 Days</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. TRACKING TAB ==================== -->
+    <section id="tab-tracking" class="tab-content hidden space-y-6">
+      <div>
+        <span class="text-xs font-bold uppercase text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">Daily Log</span>
+        <h2 class="text-2xl font-extrabold text-slate-900 mt-1">Log Today's Habits</h2>
+      </div>
+
+      <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Weight (kg)</label>
+            <input type="number" id="input-weight" value="82.4" step="0.1" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Water (ml)</label>
+            <input type="number" id="input-water" value="2000" step="50" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Steps Walked</label>
+            <input type="number" id="input-steps" value="7420" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Sleep Duration (hours)</label>
+            <input type="number" id="input-sleep" value="7.5" step="0.5" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">How did you feel today?</label>
+          <div class="grid grid-cols-4 gap-2">
+            <button type="button" class="p-2 rounded-xl border border-emerald-500 bg-emerald-50 text-xs font-bold">😊 Great</button>
+            <button type="button" class="p-2 rounded-xl border border-slate-200 bg-white text-xs font-bold">🙂 Good</button>
+            <button type="button" class="p-2 rounded-xl border border-slate-200 bg-white text-xs font-bold">😐 Okay</button>
+            <button type="button" class="p-2 rounded-xl border border-slate-200 bg-white text-xs font-bold">😞 Tired</button>
+          </div>
+        </div>
+
+        <button onclick="saveDailyHabits()" class="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-sm font-bold shadow-sm">
+          Save Today's Log
+        </button>
+      </div>
+    </section>
+
+    <!-- ==================== 5. EXERCISE TAB ==================== -->
+    <section id="tab-exercise" class="tab-content hidden space-y-6">
+      <div>
+        <span class="text-xs font-bold uppercase text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">Workouts</span>
+        <h2 class="text-2xl font-extrabold text-slate-900 mt-1">Movement Routines</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-white p-5 rounded-2xl border border-emerald-300 ring-2 ring-emerald-100 shadow-sm">
+          <span class="text-[10px] font-bold uppercase bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded">Strength</span>
+          <h3 class="text-base font-bold text-slate-900 mt-2">Full Body Strength & Core</h3>
+          <p class="text-xs text-slate-500 mt-1">30 min • ~210 kcal • Air Squats, Incline Push-ups, Glute Bridges, Dead Bug.</p>
+        </div>
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <span class="text-[10px] font-bold uppercase bg-amber-100 text-amber-800 px-2 py-0.5 rounded">Cardio / HIIT</span>
+          <h3 class="text-base font-bold text-slate-900 mt-2">Low-Impact Fat Burner</h3>
+          <p class="text-xs text-slate-500 mt-1">25 min • ~240 kcal • Step-Jacks, Reverse Lunges, Paced Climbers.</p>
+        </div>
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <span class="text-[10px] font-bold uppercase bg-purple-100 text-purple-800 px-2 py-0.5 rounded">Mobility</span>
+          <h3 class="text-base font-bold text-slate-900 mt-2">Posture Reset & Hip Flow</h3>
+          <p class="text-xs text-slate-500 mt-1">20 min • ~95 kcal • Cat-Cow, 90/90 Hips, Child's Pose.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. GROCERY TAB ==================== -->
+    <section id="tab-grocery" class="tab-content hidden space-y-6">
+      <div class="flex justify-between items-center">
+        <div>
+          <span class="text-xs font-bold uppercase text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">Cart</span>
+          <h2 class="text-2xl font-extrabold text-slate-900 mt-1">Diet Grocery List</h2>
+        </div>
+        <button onclick="addCustomGroceryItem()" class="text-xs font-bold bg-emerald-600 text-white px-3.5 py-2 rounded-xl">
+          + Add Item
+        </button>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm divide-y divide-slate-100" id="grocery-items-container">
+        <div class="py-2.5 flex items-center justify-between"><label class="flex items-center gap-2.5 text-xs font-semibold"><input type="checkbox" checked class="w-4 h-4 accent-emerald-600" /> <span class="line-through text-slate-400">Rolled Oats — 500g</span></label><span class="text-[10px] text-slate-400">Grains</span></div>
+        <div class="py-2.5 flex items-center justify-between"><label class="flex items-center gap-2.5 text-xs font-semibold"><input type="checkbox" checked class="w-4 h-4 accent-emerald-600" /> <span class="line-through text-slate-400">Chia Seeds — 100g</span></label><span class="text-[10px] text-slate-400">Pantry</span></div>
+        <div class="py-2.5 flex items-center justify-between"><label class="flex items-center gap-2.5 text-xs font-semibold"><input type="checkbox" class="w-4 h-4 accent-emerald-600" /> <span>Paneer (Low-Fat) — 400g</span></label><span class="text-[10px] text-slate-400">Dairy</span></div>
+        <div class="py-2.5 flex items-center justify-between"><label class="flex items-center gap-2.5 text-xs font-semibold"><input type="checkbox" class="w-4 h-4 accent-emerald-600" /> <span>Brown Basmati Rice — 1kg</span></label><span class="text-[10px] text-slate-400">Grains</span></div>
+        <div class="py-2.5 flex items-center justify-between"><label class="flex items-center gap-2.5 text-xs font-semibold"><input type="checkbox" class="w-4 h-4 accent-emerald-600" /> <span>Toor & Moong Dal — 500g</span></label><span class="text-[10px] text-slate-400">Grains</span></div>
+        <div class="py-2.5 flex items-center justify-between"><label class="flex items-center gap-2.5 text-xs font-semibold"><input type="checkbox" class="w-4 h-4 accent-emerald-600" /> <span>Fresh Baby Spinach — 300g</span></label><span class="text-[10px] text-slate-400">Vegetables</span></div>
+        <div class="py-2.5 flex items-center justify-between"><label class="flex items-center gap-2.5 text-xs font-semibold"><input type="checkbox" class="w-4 h-4 accent-emerald-600" /> <span>Bell Peppers & Cucumbers</span></label><span class="text-[10px] text-slate-400">Vegetables</span></div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. AI ASSISTANT TAB ==================== -->
+    <section id="tab-assistant" class="tab-content hidden space-y-4">
+      <div class="flex items-center justify-between">
+        <div>
+          <span class="text-xs font-bold uppercase text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">AI Health Guidance</span>
+          <h2 class="text-2xl font-extrabold text-slate-900 mt-1">Health Assistant</h2>
+        </div>
+        <span class="text-[10px] uppercase font-bold text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-full">Safe Mode Active</span>
+      </div>
+
+      <!-- Chat Box -->
+      <div class="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-sm h-[400px] overflow-y-auto space-y-3 text-xs leading-relaxed" id="chat-messages">
+        <div class="flex gap-2.5">
+          <div class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs flex-shrink-0">🤖</div>
+          <div class="bg-slate-50 border border-slate-200/80 p-3.5 rounded-2xl rounded-tl-none max-w-[85%] text-slate-800">
+            Hello Rahul! I'm your Vitalis Health Assistant. I have your profile active (2,100 kcal target, vegetarian, peanut-free). How can I assist you with recipes, workouts, or hydration today?
+          </div>
+        </div>
+      </div>
+
+      <!-- Prompt Chips -->
+      <div class="flex items-center gap-1.5 overflow-x-auto pb-1 text-[11px]">
+        <button onclick="sendPrompt('What should I eat for dinner?')" class="px-2.5 py-1 rounded-full bg-white border border-slate-200 hover:bg-emerald-50 text-slate-700 whitespace-nowrap">What should I eat for dinner?</button>
+        <button onclick="sendPrompt('Give me a high-protein snack')" class="px-2.5 py-1 rounded-full bg-white border border-slate-200 hover:bg-emerald-50 text-slate-700 whitespace-nowrap">High-protein snack</button>
+        <button onclick="sendPrompt('I ate too much at lunch, what should I do?')" class="px-2.5 py-1 rounded-full bg-white border border-slate-200 hover:bg-emerald-50 text-slate-700 whitespace-nowrap">Ate too much at lunch</button>
+      </div>
+
+      <!-- Chat Input -->
+      <div class="flex gap-2">
+        <input type="text" id="chat-input" placeholder="Ask your health assistant anything..." class="flex-1 px-4 py-2.5 text-xs sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-white shadow-sm" onkeydown="if(event.key==='Enter') sendChat()" />
+        <button onclick="sendChat()" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs shadow-sm">Send</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MOBILE BOTTOM NAVIGATION BAR -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 px-3 py-2">
+    <nav class="flex items-center justify-around text-[10px]">
+      <button onclick="switchTab('dashboard')" class="mobile-nav-btn flex flex-col items-center py-1" data-tab="dashboard">
+        <span class="text-base">🌱</span>
+        <span class="mt-0.5 font-semibold">Today</span>
+      </button>
+      <button onclick="switchTab('diet')" class="mobile-nav-btn flex flex-col items-center py-1" data-tab="diet">
+        <span class="text-base">🥗</span>
+        <span class="mt-0.5 font-semibold">Diet</span>
+      </button>
+      <button onclick="switchTab('tracking')" class="mobile-nav-btn flex flex-col items-center -mt-4" data-tab="tracking">
+        <div class="w-11 h-11 rounded-full bg-emerald-600 text-white flex items-center justify-center text-lg font-bold shadow-md">
+          +
+        </div>
+        <span class="mt-0.5 font-bold text-emerald-700">Track</span>
+      </button>
+      <button onclick="switchTab('progress')" class="mobile-nav-btn flex flex-col items-center py-1" data-tab="progress">
+        <span class="text-base">📈</span>
+        <span class="mt-0.5 font-semibold">Progress</span>
+      </button>
+      <button onclick="switchTab('assistant')" class="mobile-nav-btn flex flex-col items-center py-1" data-tab="assistant">
+        <span class="text-base">🤖</span>
+        <span class="mt-0.5 font-semibold">Coach</span>
+      </button>
+    </nav>
+  </div>
+
+  <script>
+    // Tab Switcher
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      document.getElementById('tab-' + tabId).classList.remove('hidden');
+
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        if (btn.getAttribute('data-tab') === tabId) {
+          btn.classList.add('active-tab');
+        } else {
+          btn.classList.remove('active-tab');
+        }
+      });
+
+      document.querySelectorAll('.mobile-nav-btn').forEach(btn => {
+        if (btn.getAttribute('data-tab') === tabId) {
+          btn.classList.add('mobile-active-tab');
+        } else {
+          btn.classList.remove('mobile-active-tab');
+        }
+      });
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Set initial date
+    document.getElementById('current-date-label').innerText = new Date().toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+
+    // Water State
+    let waterMl = 2000;
+    function addWater(ml) {
+      waterMl += ml;
+      const glasses = Math.round(waterMl / 250);
+      document.getElementById('water-glasses').innerText = glasses;
+      document.getElementById('water-ml-display').innerText = waterMl.toLocaleString() + ' / 2,500 ml';
+      document.getElementById('water-bar').style.width = Math.min(100, Math.round((waterMl / 2500) * 100)) + '%';
+      confetti({ particleCount: 40, spread: 50 });
+    }
+
+    // Steps State
+    let steps = 7420;
+    function addSteps(count) {
+      steps += count;
+      document.getElementById('steps-display').innerText = steps.toLocaleString();
+      document.getElementById('steps-bar').style.width = Math.min(100, Math.round((steps / 10000) * 100)) + '%';
+      confetti({ particleCount: 50, spread: 60 });
+    }
+
+    function celebrateMeal() {
+      confetti({ particleCount: 50, spread: 70 });
+      alert('✓ Meal marked as eaten! Daily score updated.');
+    }
+
+    function swapMealDemo(type) {
+      alert(`Swapped ${type} with high-protein alternative respecting your dietary preferences and peanut allergy!`);
+    }
+
+    function addCustomGroceryItem() {
+      const item = prompt('Enter item name (e.g. Almond Milk, Greek Yogurt):');
+      if (item && item.trim()) {
+        const container = document.getElementById('grocery-items-container');
+        const div = document.createElement('div');
+        div.className = 'py-2.5 flex items-center justify-between';
+        div.innerHTML = `<label class="flex items-center gap-2.5 text-xs font-semibold"><input type="checkbox" class="w-4 h-4 accent-emerald-600" /> <span>${item}</span></label><span class="text-[10px] text-slate-400">Custom</span>`;
+        container.prepend(div);
+      }
+    }
+
+    function saveDailyHabits() {
+      confetti({ particleCount: 60, spread: 60 });
+      alert('Daily habits saved successfully! Wellness score updated.');
+    }
+
+    // AI Assistant chat logic
+    function sendChat() {
+      const input = document.getElementById('chat-input');
+      const text = input.value.trim();
+      if (!text) return;
+      sendPrompt(text);
+      input.value = '';
+    }
+
+    function sendPrompt(query) {
+      const container = document.getElementById('chat-messages');
+      // User message
+      const userDiv = document.createElement('div');
+      userDiv.className = 'flex gap-2.5 justify-end';
+      userDiv.innerHTML = `<div class="bg-emerald-600 text-white p-3 rounded-2xl rounded-tr-none max-w-[85%] font-medium">${query}</div>`;
+      container.appendChild(userDiv);
+
+      let reply = "Here are balanced high-protein options for you: Roasted Edamame with Makhana (~14g protein), Greek Yogurt with Chia (~22g protein), or Sprouted Moong Dal Salad with Lemon (~15g protein). Strictly peanut-free!";
+      if (query.toLowerCase().includes('dinner')) {
+        reply = "For dinner tonight, Yellow Dal Tadka with Steamed Rice & Garlic Methi is planned (~480 kcal, 22g protein). If you want something lighter, try Moong Dal Cheela with fresh mint chutney (~360 kcal).";
+      } else if (query.toLowerCase().includes('ate too much') || query.toLowerCase().includes('lunch')) {
+        reply = "Don't stress! Take a gentle 15-20 min walk to aid glucose uptake, drink 2 glasses of water, and do not skip dinner—have a soothing light lentil broth instead.";
+      }
+
+      setTimeout(() => {
+        const aiDiv = document.createElement('div');
+        aiDiv.className = 'flex gap-2.5';
+        aiDiv.innerHTML = `<div class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs flex-shrink-0">🤖</div><div class="bg-slate-50 border border-slate-200/80 p-3.5 rounded-2xl rounded-tl-none max-w-[85%] text-slate-800">${reply}</div>`;
+        container.appendChild(aiDiv);
+        container.scrollTop = container.scrollHeight;
+      }, 500);
+
+      container.scrollTop = container.scrollHeight;
+    }
+
+    // Initialize first tab
+    switchTab('dashboard');
+  </script>
+</body>
+</html>

@@ -1,10 +1,9 @@
-# Vitalis Health — Complete AI Personalized Health & Diet Companion
+# 🌿 Vitalis Health — AI Personalized Health & Diet Companion
 
-A modern, production-grade web application for personalized health, BMI calculation, nutrition planning, daily habit tracking, and AI-powered health guidance.
+### 🌐 Live Website Link (Click To Open):
+## 👉 **https://vinayakshingare-ops.github.io/agentic_nayak/**
+> **Open on any phone or computer 24/7 without any installation.**
 
-## Live Demo Link
-Open in any mobile or desktop browser:
-https://vinayakshingare-ops.github.io/agentic_nayak/
 
 ## Features
 - **Accurate Health Calculations**: Mifflin-St Jeor TDEE, BMR, and interactive BMI gauge.
