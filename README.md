@@ -18,7 +18,7 @@
 npm install
 npm run dev
 ```
-Open http://localhost:3000
+Open https://vinayakshingare-ops.github.io/agentic_nayak/
 
 ## Author
 Vinayak Shingare (vinayakshingare-ops)
